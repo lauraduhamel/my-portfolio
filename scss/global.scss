@@ -1,0 +1,69 @@
+
+
+// Variables
+
+//colors
+$orange: #F76037;
+$blue : #08001A;
+$violet : #130035FF;
+$white : #f4e6ff;
+$gradient : #130035FF; //radial-gradient(61.25% 96.3% at 43.19% 79.81%, #130035 8.16%, #000033 42.65%);
+$title : "Commissioner";
+$body : "Commissioner";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+//Global
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $body;
+  color: $blue;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
+section.background {
+  min-height: 100vh;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+                  -45deg,
+                  rgb(17, 1, 44) 0%,
+                  rgb(12, 0, 37) 25%,
+                  rgb(8, 0, 26) 51%,
+                  rgb(8, 0, 26) 100%
+  );
+  animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+
+.wrap {
+ margin:auto;
+  padding: 0 200px;
+  max-width: 1800px;
+}
+
+
+// Text style
+
+
+
+h1 {
+  font-family: $title;
+  font-size: 90px;
+  font-weight: 700;
+  color: $orange;
+  text-transform: lowercase;
+}
