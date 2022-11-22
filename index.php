@@ -2,76 +2,192 @@
 
 <?php include "header.php"; ?>
 
-<div class="wrap">
-    <main>
-        <p>Hey, I'm</p>
-        <img src="" alt="lau logo">
-        <h1>a graphic designer in freelance</h1>
-        <div></div>
-        <div><a href="">Discover my portfolio</a></div>
-    </main>
-    <section class="works">
-        <div>
-            <h2>Works</h2>
-            <p></p>
-        </div>
 
-        <div class="project">
-            <div class="left">
-                <p></p>
-                <h3></h3>
-            </div>
-            <div class="right">
-                <img src="" alt="">
-            </div>
-        </div>
-
-        <div class="over">
-
-        </div>
-
-
-
-    </section>
-
-    <section class="about">
+    <main id="home">
         <div class="wrap">
-            <h1></h1>
-            <p></p>
-            <div class="left"><img src="" alt=""></div>
-            <div class="right">
-                <div></div>
-                <p></p>
-            </div>
-            <p></p>
-            <div><a href="">my resume over here</a></div>
-    </section>
-
-    <section class="contact">
-            <h2>Get in touch</h2>
-            <p></p>
             <div>
-                <div class="left">
-                    <div></div>
-                    <div><a href="">contact me</a></div>
-                </div>
-                <div class="right">
-                    <div><img src="" alt=""></div>
-                    <h3>+ 33 767944074</h3>
-                    <h3>contact@lauraduhamel.com</h3>
+                <p>Hey, nice to meet you, I'm</p>
+                <img src="img/logo.svg" alt="lau logo">
+                <h1>a graphic designer in freelance</h1>
+                <span class="line"></span>
+                <div class="button">
+                    <a href="#works" class="light">Discover my portfolio</a>
                 </div>
             </div>
+        </div>
+    </main>
+
+    <section class="works" id="works">
+        <div class="wrap">
+             <div class="flex-container">
+                 <div class="text">
+                    <h2>Wo<span>r</span>ks</h2><span></span>
+                    <p>Over here, is my work as a graphic and an illustrator, have a pleasant visit! </p>
+                 </div>
+                 <img src="img/works-icon.svg" class="icon" alt="icon of a picture">
+            </div>
+            <span class="line dark"></span>
+            <div class="projects">
+                <div class="grid-container left">
+                    <div class="grid-item-1">
+                        <p>1</p>
+                    </div>
+                    <div class="grid-item-2">
+                        <h3>Louise art en entreprises</h3>
+                    </div>
+                    <div class="grid-item-3">
+                        <img src="img/louise.png" alt="banner of louise art en entreprises">
+                    </div>
+                    <div class="grid-item-4 over">
+                        <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
+                            leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
+                    </div>
+                    <div class="grid-item-5 over">
+                        <span class="line dark"></span>
+                    </div>
+                    <div class="grid-item-6 over">
+                        <ul>
+                            <li>Branding</li>
+                            <li>Webdesign</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-container right">
+                    <div class="grid-item-1">
+                        <p>2</p>
+                    </div>
+                    <div class="grid-item-2">
+                        <h3>Main St.</h3>
+                    </div>
+                    <div class="grid-item-3">
+                        <img src="img/main-st.png" alt="banner of louise art en entreprises">
+                    </div>
+                    <div class="grid-item-4 over">
+                        <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
+                            leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
+                    </div>
+                    <div class="grid-item-5 over">
+                        <span class="line dark"></span>
+                    </div>
+                    <div class="grid-item-6 over">
+                        <ul>
+                            <li>Branding</li>
+                            <li>Webdesign</li>
+                            <li>Brochure</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-container left">
+                    <div class="grid-item-1">
+                        <p>3</p>
+                    </div>
+                    <div class="grid-item-2">
+                        <h3>Feu de dragon</h3>
+                    </div>
+                    <div class="grid-item-3">
+                        <img src="img/feu-de-dragon.png" alt="banner of louise art en entreprises">
+                    </div>
+                    <div class="grid-item-4 over">
+                        <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
+                            leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
+                    </div>
+                    <div class="grid-item-5 over">
+                        <span class="line dark"></span>
+                    </div>
+                    <div class="grid-item-6 over">
+                        <ul>
+                            <li>Illustration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-container right">
+                    <div class="grid-item-1">
+                        <p>4</p>
+                    </div>
+                    <div class="grid-item-2">
+                        <h3>Ces âmes</h3>
+                    </div>
+                    <div class="grid-item-3">
+                        <img src="img/ces-ames.png" alt="banner of louise art en entreprises">
+                    </div>
+                    <div class="grid-item-4 over">
+                        <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
+                            leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
+                    </div>
+                    <div class="grid-item-5 over">
+                        <span class="line dark"></span>
+                    </div>
+                    <div class="grid-item-6 over">
+                        <ul>
+                            <li>Branding</li>
+                            <li>Webdesign</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <span class="line dark"></span>
+            <div class="button"><a href="https://www.behance.net/lauraduhamel" class="dark">See more on my behance</a></div>
+        </div>
     </section>
 
+    <section class="about" id="about">
+        <div class="wrap">
+            <div class="grid-container">
+                <div class="grid-item-1">
+                    <h2>A<span>b</span>out me</h2>
+                    <p>I'm Laura Duhamel, alias Lau</p>
+                </div>
+                <div class="grid-item-2">
+                    <div>
+                        <span class="line"></span>
+                        <ul>
+                            <li>I'm french.</li>
+                            <li>I'm 20 years old.</li>
+                            <li>I'm a graphic designer.</li>
+                            <li>I'm an illustrator.</li>
+                        </ul>
+                        <p>&</p>
+                        <ul>
+                            <li>I'm on <a href="https://www.behance.net/lauraduhamel">Behance</a>.</li>
+                            <li>I'm on <a href="https://www.linkedin.com/in/lauraduhamel/">Linkedin</a>.</li>
+                            <li>I'm on <a href="">Pinterest</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item-3">
+                    <img src="img/profile-animation.gif" alt="Animation of an illustration of myself">
+                </div>
+                <div class="grid-item-4">
+                    <p>To expend, I’m a passionate, a motivated, a little crazy, a little boring, a little annoying, but I’m myself and I’m trying to do my best everytime. I think that perfection doesn’t exist and design help me in my life, everyday, every times</p>
+                    <div class="button"><a class="light" href="pdf/laura_duhamel_cv.pdf" target="_blank">my resume over here</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
-
-
-
-
-
-
-
+    <section class="contact" id="contact">
+        <div class="wrap">
+            <div class="grid-container">
+                    <div class="grid-item grid-item-1">
+                        <h2>Get in t<span>o</span>uch</h2>
+                    </div>
+                <div class="grid-item grid-item-2">
+                        <p>You need my services to create a flyer, a brochure, a brand identity, an illustration, a webdesign, for a small or bigger project ? You just need some informations ?
+                            Contact me, I would be happy to talk & work with you!</p>
+                    </div>
+                    <div class="grid-item grid-item-3">
+                        <span class="line dark"></span>
+                        <div class="button"><a href="mailto:contact@lauraduhamel.com" class="dark">contact me</a></div>
+                    </div>
+                <div class="grid-item grid-item-4">
+                        <img src="img/email-icon.svg" class="icon" alt="icon of an email">
+                        <h3><a href="tel:+33767944074">+ 33 767944074</a></h3>
+                        <h3><a href="mailto:contact@lauraduhamel.com">contact@lauraduhamel.com</a></h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 <?php include "footer.php"; ?>

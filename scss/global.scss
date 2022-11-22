@@ -1,69 +1,490 @@
 
-
 // Variables
 
-//colors
-$orange: #F76037;
-$blue : #08001A;
-$violet : #130035FF;
-$white : #f4e6ff;
-$gradient : #130035FF; //radial-gradient(61.25% 96.3% at 43.19% 79.81%, #130035 8.16%, #000033 42.65%);
-$title : "Commissioner";
-$body : "Commissioner";
+$blue : #0F0FEE;
+$white : #FFFFFF;
+$title : 'ED Nimpkish';
+$paragraph : 'Inter';
 
 
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+//Import
 
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 //Global
+
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
 body {
-  font-family: $body;
-  color: $blue;
+  font-family: $paragraph;
+  color: $white;
+  background: $blue;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 20px;
+}
+
+a {
+  color:$white;
+ text-transform: lowercase;
 }
 
 
-section.background {
-  min-height: 100vh;
-  background-size: 300% 300%;
-  background-image: linear-gradient(
-                  -45deg,
-                  rgb(17, 1, 44) 0%,
-                  rgb(12, 0, 37) 25%,
-                  rgb(8, 0, 26) 51%,
-                  rgb(8, 0, 26) 100%
-  );
-  animation: AnimateBG 20s ease infinite;
+.about, .contact, .works {
+  p {
+    max-width: 350px;
+  }
 }
 
-@keyframes AnimateBG {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+img.icon {
+  max-width: 150px;
 }
 
+h2 {
+  font-family: $title;
+  font-size: 128px;
+  line-height: 128px;
+  text-transform: lowercase;
+
+  span {
+    text-transform: uppercase;
+  }
+
+}
+
+section, main {
+  padding: 96px 0;
+
+  &.works, &.contact {
+      color: $blue;
+      background: $white;
+
+    a {
+      color: $blue;
+
+    }
+
+  }
+
+}
 
 .wrap {
- margin:auto;
-  padding: 0 200px;
-  max-width: 1800px;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 112px;
+
 }
 
 
-// Text style
+header {
+  background: rgb(15, 15, 238, 0.90);
+  z-index: 2;
+  padding: 16px 0;
+  position: fixed;
+  width: 100vw;
+
+  * {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 20px;
+  }
+
+  > .wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left {
+    > ul {
+      display: flex;
+      gap: 32px;
+    }
+  }
+}
+
+//button
+
+div.button {
+  display: flex;
+
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+
+    &.dark {
+      border: 2px solid $blue;
+    }
+
+    &.light {
+      border: 2px solid $white;
+    }
+
+  }
+
+}
 
 
 
-h1 {
-  font-family: $title;
-  font-size: 90px;
-  font-weight: 700;
-  color: $orange;
-  text-transform: lowercase;
+
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  p, h1 {
+    margin-bottom: 12px;
+  }
+
+  .wrap {
+
+    > div {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        margin: 12px auto;
+      }
+
+      img {
+        margin-bottom: 12px;
+        max-width: 400px;
+      }
+
+      div.button {
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+}
+
+//section works projects
+
+section.works {
+
+  div.flex-container {
+    display: flex;
+    gap:48px;
+    vertical-align: top;
+
+    img {
+      transform: rotate(18deg);
+    }
+
+
+  }
+
+  div.grid-container {
+    display: grid;
+    border: solid 2px $blue;
+    margin-bottom: 64px;
+    grid-auto-rows: minmax(0, auto);
+
+  &.left {
+    grid-template-areas: "number image"
+                          "name image";
+
+    .grid-item-3 {
+        justify-content: end;
+    }
+
+
+
+  }
+    &.right {
+      grid-template-areas: "image number"
+                          "image name";
+    }
+
+    .over {
+      display: none;
+    }
+
+    .grid-item-1 {
+      grid-area: number;
+      font-family: $title;
+      font-size: 155px;
+      line-height: 155px;
+
+    }
+
+    .grid-item-2 {
+      grid-area: name;
+      font-family: $title;
+      font-size: 20px;
+      line-height: 27px;
+      text-transform: lowercase;
+    }
+
+    .grid-item-3 {
+      grid-area: image;
+      display: flex;
+
+    }
+
+    .grid-item-4 {
+      grid-area: paragraph;
+
+    }
+
+    .grid-item-5 {
+      grid-area: line;
+    }
+
+    .grid-item-6 {
+      grid-area: category;
+    }
+
+
+    &:hover {
+
+      &.left {
+        grid-template-areas: "number name line category image"
+                          "number paragraph line category image";
+      }
+
+      &.right {
+        grid-template-areas: "image number name line category"
+                          "image number paragraph line category";
+      }
+
+      .over {
+        display: grid;
+        animation-timing-function: ease-out;
+        animation-duration: 300ms;
+
+      }
+
+    }
+
+
+  }
+
+
+
+}
+
+
+
+//section about me
+
+section.about {
+
+
+  img {
+    max-width: 500px;
+  }
+
+  div.button {
+    justify-content: center;
+  }
+
+   div.grid-container {
+     display: grid;
+     grid-column: 2;
+     grid-template-areas: ". header"
+                          "profile list"
+                          "info . ";
+
+     .grid-item-1 {
+       grid-area: header;
+     }
+
+     .grid-item-2 {
+       grid-area: list;
+       display: inline-flex;
+       margin-left:20%;
+
+       > div {
+         display: flex;
+         flex-direction: column;
+         justify-items: center;
+       }
+
+       li {
+         margin : 6px;
+       }
+
+       p {
+         margin: 24px 0;
+       }
+
+       span.line {
+         margin:12px 0 12px 24px; //take off to center the line
+       }
+
+     }
+
+     .grid-item-3 {
+       grid-area: profile;
+       display: flex;
+       justify-content: center;
+     }
+
+     .grid-item-4 {
+       grid-area: info;
+
+       p {
+         margin: 12px auto 48px auto;
+
+       }
+
+     }
+
+
+  }
+
+
+}
+
+
+
+//section get in touch - contact
+
+section.contact {
+
+  h3 {
+    text-align: left;
+    font-family: $title;
+    font-size: 64px;
+    line-height: 70px;
+
+    &:last-of-type {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+  }
+
+  div.grid-container {
+    display: grid;
+    grid-column: 3;
+    grid-auto-columns: minmax(15px, auto);
+    grid-template-areas: "title title ."
+                          "paragraph . ."
+                          "toggle contact contact";
+
+
+
+    .grid-item-1 {
+      grid-area: title;
+    }
+
+    .grid-item-2 {
+      grid-area: paragraph;
+
+    }
+
+    .grid-item-3 {
+      grid-area: toggle;
+      display: flex;
+      flex-direction: column;
+
+
+      div.button {
+        justify-content: center;
+      }
+
+
+
+    }
+
+    .grid-item-4 {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      grid-area: contact;
+      align-self: end;
+
+      img {
+        transform: rotate(10deg);
+      }
+
+
+    }
+
+  }
+
+}
+
+
+
+
+// footer
+
+footer {
+  padding: 64px 0 32px 0;
+
+  div.language {
+display: flex;
+
+    p a {
+      text-transform: uppercase;
+    }
+
+    span::after {
+      display: block;
+      content: "|";
+      color: $white;
+      padding: 0 6px;
+    }
+
+  }
+
+  p {
+    text-align: center;
+  }
+
+   div.container {
+    display: flex;
+    margin-bottom: 32px;
+
+     > div {
+
+       &:first-of-type {
+         margin: auto;
+       }
+
+       &:nth-of-type(2) {
+
+       }
+     }
+
+  }
+
+}
+
+
+
+
+
+//decoration element
+
+span {
+
+
+  &.line {
+    border-left: 2px solid $white;
+    height: 100px;
+    display: block;
+    margin:12px auto;
+
+    &.dark {
+      border-left: 2px solid $blue;
+    }
+
+  }
+
 }

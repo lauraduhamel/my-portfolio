@@ -6,19 +6,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="author" content="Laura Duhamel">
-    <meta name="keywords" content="laura, duhamel, portfolio, projets, design graphique, audiovisuel, motion design, programmation, intégration web, dut, mmi, dec, tim, iut, Chambéry, cégep, Matane" />
-    <meta name="description" content="Enchanté, Laura Duhamel. Bienvenue sur mon portfolio qui regroupe l'ensemble de mes projets depuis le début de mes études en multimédia. Découvrez mes productions en design graphique, audiovisuel, programmation et développement web" />
-    <meta property="og:title" content="Portfolio de Laura Duhamel" />
+    <meta name="keywords" content="laura, duhamel, laura duhamel, lau, portfolio, projects, graphic design, motion design, freelance, France, Chambéry, Maryville, USA, Meximieux, Ain, USMB, IUT, DUT, MMI, Matane, CEGEP, DEC, TIM" />
+    <meta name="description" content="Nice to meet you, I'm Laura Duhamel, a freelance in graphic designer. You are on my portfolio, let's discover my projects." />
+    <meta property="og:title" content="Laura Duhamel's portfolio" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://lauraduhamel.com/" /> <!--- a venir -->
+    <meta property="og:url" content="http://lauraduhamel.com/" />
     <meta property="og:image" content="" /> <!--- a venir -->
-    <meta property="og:site_name" content="Portfolio de Laura Duhamel" />
-    <meta property="og:description" content="Enchanté, Laura Duhamel. Bienvenue sur mon portfolio qui regroupe l'ensemble de mes projets depuis le début de mes études en multimédia. Découvrez mes productions en design graphique, audiovisuel, programmation et développement web" />
+    <meta property="og:site_name" content="Laura Duhamel's portfolio" />
+    <meta property="og:description" content="Nice to meet you, I'm Laura Duhamel, a freelance in graphic designer. You are on my portfolio, let's discover my projects."/>
 
-    <title>Portfolio de Laura Duhamel</title> <!---  -->
-    <link rel="icon" type="image/x-icon" href="./images/logo.png">
-
+    <title>Laura Duhamel's portfolio</title> <!---  -->
+    <link rel="icon" type="image/x-icon" href="img/logo.svg">
     <link rel="stylesheet" href="css/style.css">
+
     <script src="js/libs/jquery-3.6.0.min.js"></script>
     <script src="js/menu.js"></script>
 
@@ -27,17 +27,17 @@
 
 <header>
     <div class="wrap">
-        <div>
-            <div class="right"></div>
+            <div class="right">
+                <a href="#home"><img src="img/icon.svg" alt="icon Lau"></a>
+            </div>
             <div class="left">
                 <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""><img src="" alt="linkedin icon"></a></li>
-                    <li><a href=""><img src="" alt="behance icon"></a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://www.linkedin.com/in/lauraduhamel/"><img src="img/linkedin-icon.png" alt="linkedin icon"></a></li>
+                    <li><a href="https://www.behance.net/lauraduhamel"><img src="img/behance-icon.png" alt="behance icon"></a></li>
                 </ul>
             </div>
-        </div>
     </div>
 </header>
 

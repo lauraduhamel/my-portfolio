@@ -1,17 +1,566 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 3 | @import 'pages/contact.scss';
- *   |         ^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\main.scss 3:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 3 \2502  @import 'pages/contact.scss';\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\main.scss 3:9  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter";
+  color: #FFFFFF;
+  background: #0F0FEE;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+a {
+  color: #FFFFFF;
+  text-transform: lowercase;
+}
+
+.about p, .contact p, .works p {
+  max-width: 350px;
+}
+
+img.icon {
+  max-width: 150px;
+}
+
+h2 {
+  font-family: "ED Nimpkish";
+  font-size: 128px;
+  line-height: 128px;
+  text-transform: lowercase;
+}
+h2 span {
+  text-transform: uppercase;
+}
+
+section, main {
+  padding: 96px 0;
+}
+section.works, section.contact, main.works, main.contact {
+  color: #0F0FEE;
+  background: #FFFFFF;
+}
+section.works a, section.contact a, main.works a, main.contact a {
+  color: #0F0FEE;
+}
+
+.wrap {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 112px;
+}
+
+header {
+  background: rgba(15, 15, 238, 0.9);
+  z-index: 2;
+  padding: 16px 0;
+  position: fixed;
+  width: 100vw;
+}
+header * {
+  display: flex;
+  align-items: center;
+}
+header img {
+  width: 20px;
+}
+header > .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+header .left > ul {
+  display: flex;
+  gap: 32px;
+}
+
+div.button {
+  display: flex;
+}
+div.button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+}
+div.button a.dark {
+  border: 2px solid #0F0FEE;
+}
+div.button a.light {
+  border: 2px solid #FFFFFF;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+main p, main h1 {
+  margin-bottom: 12px;
+}
+main .wrap > div {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+main .wrap > div span {
+  margin: 12px auto;
+}
+main .wrap > div img {
+  margin-bottom: 12px;
+  max-width: 400px;
+}
+main .wrap > div div.button {
+  justify-content: center;
+}
+
+section.works div.flex-container {
+  display: flex;
+  gap: 48px;
+  vertical-align: top;
+}
+section.works div.flex-container img {
+  transform: rotate(18deg);
+}
+section.works div.grid-container {
+  display: grid;
+  border: solid 2px #0F0FEE;
+  margin-bottom: 64px;
+  grid-auto-rows: minmax(0, auto);
+}
+section.works div.grid-container.left {
+  grid-template-areas: "number image" "name image";
+}
+section.works div.grid-container.left .grid-item-3 {
+  justify-content: end;
+}
+section.works div.grid-container.right {
+  grid-template-areas: "image number" "image name";
+}
+section.works div.grid-container .over {
+  display: none;
+}
+section.works div.grid-container .grid-item-1 {
+  grid-area: number;
+  font-family: "ED Nimpkish";
+  font-size: 155px;
+  line-height: 155px;
+}
+section.works div.grid-container .grid-item-2 {
+  grid-area: name;
+  font-family: "ED Nimpkish";
+  font-size: 20px;
+  line-height: 27px;
+  text-transform: lowercase;
+}
+section.works div.grid-container .grid-item-3 {
+  grid-area: image;
+  display: flex;
+}
+section.works div.grid-container .grid-item-4 {
+  grid-area: paragraph;
+}
+section.works div.grid-container .grid-item-5 {
+  grid-area: line;
+}
+section.works div.grid-container .grid-item-6 {
+  grid-area: category;
+}
+section.works div.grid-container:hover.left {
+  grid-template-areas: "number name line category image" "number paragraph line category image";
+}
+section.works div.grid-container:hover.right {
+  grid-template-areas: "image number name line category" "image number paragraph line category";
+}
+section.works div.grid-container:hover .over {
+  display: grid;
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
+}
+
+section.about img {
+  max-width: 500px;
+}
+section.about div.button {
+  justify-content: center;
+}
+section.about div.grid-container {
+  display: grid;
+  grid-column: 2;
+  grid-template-areas: ". header" "profile list" "info . ";
+}
+section.about div.grid-container .grid-item-1 {
+  grid-area: header;
+}
+section.about div.grid-container .grid-item-2 {
+  grid-area: list;
+  display: inline-flex;
+  margin-left: 20%;
+}
+section.about div.grid-container .grid-item-2 > div {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+section.about div.grid-container .grid-item-2 li {
+  margin: 6px;
+}
+section.about div.grid-container .grid-item-2 p {
+  margin: 24px 0;
+}
+section.about div.grid-container .grid-item-2 span.line {
+  margin: 12px 0 12px 24px;
+}
+section.about div.grid-container .grid-item-3 {
+  grid-area: profile;
+  display: flex;
+  justify-content: center;
+}
+section.about div.grid-container .grid-item-4 {
+  grid-area: info;
+}
+section.about div.grid-container .grid-item-4 p {
+  margin: 12px auto 48px auto;
+}
+
+section.contact h3 {
+  text-align: left;
+  font-family: "ED Nimpkish";
+  font-size: 64px;
+  line-height: 70px;
+}
+section.contact h3:last-of-type {
+  font-size: 24px;
+  line-height: 30px;
+}
+section.contact div.grid-container {
+  display: grid;
+  grid-column: 3;
+  grid-auto-columns: minmax(15px, auto);
+  grid-template-areas: "title title ." "paragraph . ." "toggle contact contact";
+}
+section.contact div.grid-container .grid-item-1 {
+  grid-area: title;
+}
+section.contact div.grid-container .grid-item-2 {
+  grid-area: paragraph;
+}
+section.contact div.grid-container .grid-item-3 {
+  grid-area: toggle;
+  display: flex;
+  flex-direction: column;
+}
+section.contact div.grid-container .grid-item-3 div.button {
+  justify-content: center;
+}
+section.contact div.grid-container .grid-item-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  grid-area: contact;
+  align-self: end;
+}
+section.contact div.grid-container .grid-item-4 img {
+  transform: rotate(10deg);
+}
+
+footer {
+  padding: 64px 0 32px 0;
+}
+footer div.language {
+  display: flex;
+}
+footer div.language p a {
+  text-transform: uppercase;
+}
+footer div.language span::after {
+  display: block;
+  content: "|";
+  color: #FFFFFF;
+  padding: 0 6px;
+}
+footer p {
+  text-align: center;
+}
+footer div.container {
+  display: flex;
+  margin-bottom: 32px;
+}
+footer div.container > div:first-of-type {
+  margin: auto;
+}
+span.line {
+  border-left: 2px solid #FFFFFF;
+  height: 100px;
+  display: block;
+  margin: 12px auto;
+}
+span.line.dark {
+  border-left: 2px solid #0F0FEE;
+}
+
+/*
+//menu
+
+header {
+  padding: 48px 0;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  //
+
+  ul {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    li {
+      text-align: center;
+      margin-bottom: 24px;
+      animation: .3s print;
+
+      a {
+        font-family: $title;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 54px;
+        color: $blue;
+
+
+      }
+
+      a {
+
+        &:after {
+          content: '.';
+          letter-spacing: -10px;
+          opacity: 0;
+          transition: letter-spacing 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+      &:hover {
+
+        &:after {
+          text-indent: 0px;
+          letter-spacing: normal;
+          opacity: 1;
+
+        }
+      }
+
+
+
+      }
+
+
+    }
+  }
+
+
+}
+
+.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//backdrop
+.cover  {
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: $orange;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hamburger {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    transition: 0.4s ease;
+    &.logo {
+    width: 15px;
+  }
+
+
+    &:hover {
+      transform: scale(1.2);
+
+
+    }
+
+  }
+
+}
+
+
+
+@keyframes print {
+
+  from {
+    margin-top: -50px;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+
+}
+
+@keyframes fade {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+//header
+
+/*
+header {
+
+  div.menu {
+    display: none;
+  }
+
+  div.hamburger {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 0;
+
+  }
+
+
+}
+
+
+
+.menu {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $orange;
+  z-index: 100;
+
+  > .wrap div {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 48px 0;
+  }
+
+
+  a {
+    font-family: 'Media Sans Extended';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 53px;
+    color: $blue;
+    display: block;
+  }
+}
+
+
+
+
+.delete-image {
+  z-index: 10;
+}
+
+
+*/
+
+/*# sourceMappingURL=style.css.map */
