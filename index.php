@@ -28,102 +28,72 @@
             </div>
             <span class="line dark"></span>
             <div class="projects">
-                <div class="grid-container left">
-                    <div class="grid-item-1">
-                        <p>1</p>
+                <div class="project-container left">
+                <a href="https://www.behance.net/gallery/152688227/Louise-art-en-entreprise" target="_blank">
+                    <div class="grid-container left">
+                        <div class="grid-item-1">
+                            <p class="number">1</p>
+                            <h3>Louise art en entreprises</h3>
+                        </div>
+                        <div class="grid-item-2">
+                            <img src="img/louise.png" alt="banner of louise art en entreprises">
+                        </div>
                     </div>
-                    <div class="grid-item-2">
-                        <h3>Louise art en entreprises</h3>
-                    </div>
-                    <div class="grid-item-3">
-                        <img src="img/louise.png" alt="banner of louise art en entreprises">
-                    </div>
-                    <div class="grid-item-4 over">
-                        <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
-                            leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
-                    </div>
-                    <div class="grid-item-5 over">
-                        <span class="line dark"></span>
-                    </div>
-                    <div class="grid-item-6 over">
-                        <ul>
-                            <li>Branding</li>
-                            <li>Webdesign</li>
-                        </ul>
-                    </div>
+                    <div class="overlay left">
+                            <div class="grid-item-1">
+                                <p class="number">1</p>
+                            </div>
+                            <div class="grid-item-2">
+                                <h3>Louise art en entreprises</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
+                                    leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
+                            </div>
+                            <div class="grid-item-3">
+                                <span class="line light"></span>
+                            </div>
+                            <div class="grid-item-4">
+                                <ul>
+                                    <li>Branding</li>
+                                    <li>Webdesign</li>
+                                </ul>
+                            </div>
+                        </div>
+                </a>
                 </div>
-                <div class="grid-container right">
-                    <div class="grid-item-1">
-                        <p>2</p>
-                    </div>
-                    <div class="grid-item-2">
-                        <h3>Main St.</h3>
-                    </div>
-                    <div class="grid-item-3">
-                        <img src="img/main-st.png" alt="banner of louise art en entreprises">
-                    </div>
-                    <div class="grid-item-4 over">
-                        <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
-                            leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
-                    </div>
-                    <div class="grid-item-5 over">
-                        <span class="line dark"></span>
-                    </div>
-                    <div class="grid-item-6 over">
-                        <ul>
-                            <li>Branding</li>
-                            <li>Webdesign</li>
-                            <li>Brochure</li>
-                        </ul>
-                    </div>
+                <div class="project-container right">
+                    <a href="https://www.behance.net/gallery/152688227/Louise-art-en-entreprise" target="_blank">
+                        <div class="grid-container right">
+                            <div class="grid-item-1">
+                                <p class="number">2</p>
+                                <h3>Main St.</h3>
+                            </div>
+                            <div class="grid-item-2">
+                                <img src="img/main-st.png" alt="banner of louise art en entreprises">
+                            </div>
+                        </div>
+                        <div class="overlay right">
+                            <div class="grid-item-1">
+                                <p class="number">2</p>
+                            </div>
+                            <div class="grid-item-2">
+                                <h3>Main St.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
+                                    leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
+                            </div>
+                            <div class="grid-item-3">
+                                <span class="line light"></span>
+                            </div>
+                            <div class="grid-item-4">
+                                <ul>
+                                    <li>Branding</li>
+                                    <li>Brochure</li>
+                                    <li>Webdesign</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="grid-container left">
-                    <div class="grid-item-1">
-                        <p>3</p>
-                    </div>
-                    <div class="grid-item-2">
-                        <h3>Feu de dragon</h3>
-                    </div>
-                    <div class="grid-item-3">
-                        <img src="img/feu-de-dragon.png" alt="banner of louise art en entreprises">
-                    </div>
-                    <div class="grid-item-4 over">
-                        <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
-                            leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
-                    </div>
-                    <div class="grid-item-5 over">
-                        <span class="line dark"></span>
-                    </div>
-                    <div class="grid-item-6 over">
-                        <ul>
-                            <li>Illustration</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="grid-container right">
-                    <div class="grid-item-1">
-                        <p>4</p>
-                    </div>
-                    <div class="grid-item-2">
-                        <h3>Ces âmes</h3>
-                    </div>
-                    <div class="grid-item-3">
-                        <img src="img/ces-ames.png" alt="banner of louise art en entreprises">
-                    </div>
-                    <div class="grid-item-4 over">
-                        <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
-                            leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
-                    </div>
-                    <div class="grid-item-5 over">
-                        <span class="line dark"></span>
-                    </div>
-                    <div class="grid-item-6 over">
-                        <ul>
-                            <li>Branding</li>
-                            <li>Webdesign</li>
-                        </ul>
-                    </div>
-                </div>
+
             </div>
 
             <span class="line dark"></span>

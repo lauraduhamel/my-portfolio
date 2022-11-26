@@ -188,60 +188,121 @@ section.works div.flex-container {
 section.works div.flex-container img {
   transform: rotate(18deg);
 }
-section.works div.grid-container {
-  display: grid;
+section.works div.project-container {
   border: solid 2px #0F0FEE;
+  position: relative;
   margin-bottom: 64px;
-  grid-auto-rows: minmax(0, auto);
 }
-section.works div.grid-container.left {
-  grid-template-areas: "number image" "name image";
-}
-section.works div.grid-container.left .grid-item-3 {
-  justify-content: end;
-}
-section.works div.grid-container.right {
-  grid-template-areas: "image number" "image name";
-}
-section.works div.grid-container .over {
-  display: none;
-}
-section.works div.grid-container .grid-item-1 {
-  grid-area: number;
-  font-family: "ED Nimpkish";
-  font-size: 155px;
-  line-height: 155px;
-}
-section.works div.grid-container .grid-item-2 {
-  grid-area: name;
+section.works div.project-container h3 {
   font-family: "ED Nimpkish";
   font-size: 20px;
   line-height: 27px;
   text-transform: lowercase;
 }
-section.works div.grid-container .grid-item-3 {
+section.works div.project-container p.number {
+  font-family: "ED Nimpkish";
+  font-size: 155px;
+  line-height: 155px;
+  margin-bottom: -14px;
+}
+section.works div.project-container div.grid-container {
+  display: grid;
+  grid-auto-rows: minmax(0, auto);
+}
+section.works div.project-container div.grid-container .grid-item-1 {
+  grid-area: intro;
+  display: flex;
+  padding: 0 32px;
+  flex-direction: column;
+  justify-content: center;
+}
+section.works div.project-container div.grid-container .grid-item-2 {
   grid-area: image;
   display: flex;
 }
-section.works div.grid-container .grid-item-4 {
-  grid-area: paragraph;
+section.works div.project-container div.grid-container.left {
+  grid-template-areas: "intro image";
 }
-section.works div.grid-container .grid-item-5 {
-  grid-area: line;
+section.works div.project-container div.grid-container.left .grid-item-2 {
+  justify-content: end;
 }
-section.works div.grid-container .grid-item-6 {
-  grid-area: category;
+section.works div.project-container div.grid-container.right {
+  grid-template-areas: "image intro";
 }
-section.works div.grid-container:hover.left {
-  grid-template-areas: "number name line category image" "number paragraph line category image";
+section.works div.project-container div.grid-container.right .grid-item-1 {
+  text-align: right;
 }
-section.works div.grid-container:hover.right {
-  grid-template-areas: "image number name line category" "image number paragraph line category";
-}
-section.works div.grid-container:hover .over {
+section.works div.project-container .overlay {
   display: grid;
-  animation-timing-function: ease-out;
-  animation-duration: 300ms;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  transition: all 1s;
+  background: rgba(15, 15, 238, 0.95);
+  color: #FFFFFF;
+  grid-template-columns: repeat(4, min-content);
+  column-gap: 32px;
+  padding: 0 32px;
+  animation: slide-in 4s both;
+}
+section.works div.project-container .overlay.left {
+  grid-template-areas: "number descriptif line category";
+  left: 0;
+  right: 200px;
+}
+section.works div.project-container .overlay.right {
+  grid-template-areas: "category line descriptif number";
+  left: 200px;
+  right: 0;
+  text-align: right;
+}
+section.works div.project-container .overlay .grid-item-1 {
+  grid-area: number;
+}
+section.works div.project-container .overlay .grid-item-2 {
+  grid-area: descriptif;
+  min-width: 350px;
+}
+section.works div.project-container .overlay .grid-item-2 h3 {
+  margin-bottom: 12px;
+}
+section.works div.project-container .overlay .grid-item-3 {
+  grid-area: line;
+  grid-template-columns: 50px;
+  display: flex;
+}
+section.works div.project-container .overlay .grid-item-3 span {
+  margin: auto;
+}
+section.works div.project-container .overlay .grid-item-4 {
+  grid-area: category;
+  display: flex;
+  text-transform: lowercase;
+  font-family: "ED Nimpkish";
+  font-size: 13px;
+  line-height: 18px;
+  margin: 16px auto;
+}
+section.works div.project-container .overlay .grid-item-4 > ul {
+  margin: auto;
+  display: grid;
+  gap: 5px;
+}
+section.works div.project-container:hover {
+  cursor: url(../img/icon.svg), auto;
+}
+section.works div.project-container:hover .grid-container .grid-item-1 {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+section.works div.project-container:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+  margin: auto;
 }
 
 section.about img {
@@ -365,6 +426,14 @@ span.line.dark {
   border-left: 2px solid #0F0FEE;
 }
 
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 /*
 //menu
 

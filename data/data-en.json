@@ -1,0 +1,81 @@
+
+{
+
+  "menu": [
+    {
+      "works": "works",
+      "contact": "contact"
+    }
+  ],
+
+  "home": [
+    {
+      "hey": "Hey, nice to meet you, I'm",
+      "who": "a graphic designer in freelance",
+      "button": "discover my portfolio"
+    }
+  ],
+
+  "work": [
+    {
+      "title": "Wo<span>r</span>ks",
+      "description": "Over here, is my work as a graphic and an illustrator, have a pleasant visit!"
+    }
+  ],
+
+
+  "projects" : [
+   {
+    "name" : "Louise, art en entreprises",
+    "description" : "Lorempsum bmablabla",
+    "image": {"url":"louise.png", "alt": "banner of louise"},
+    "categories": ["Branding"]
+  },
+
+  {
+    "name" : "Main St",
+    "description" : "Lorempsum bmablabla",
+    "image": {"url":"main-st.png", "alt": "banner of Main St"},
+    "categories": ["Branding", "Web design", "Brochure"]
+  },
+
+  {
+    "name" : "Feu de dragon",
+    "description" : "Lorempsum bmablabla",
+    "image": {"url":"feu-de-dragon.png", "alt": "banner of Feu de dragon"},
+    "categories": ["Illustration"]
+  },
+
+  {
+    "name" : "Ces âmes",
+    "description" : "Lorempsum bmablabla",
+    "image": {"url":"ces-ames.png", "alt": "banner of Ces âmes"},
+    "categories": ["Web design", "Branding"]
+  }
+],
+
+  "about" : [
+    {
+      "title": "A<span>b</span>out me",
+      "subtitle": "I'm Laura Duhamel, alias Lau.",
+      "list": ["I'm french", "I'm 20 years old", "I'm graphic designer", "I'm an illustrator"];
+      "socialmedia" : "I'm on",
+      "description" : "To expend, I’m a passionate, a motivated, a little crazy, a little boring, a little annoying, but I’m myself and I’m trying to do my best everytime. I think that perfection doesn’t exist and design help me in my life, everyday, every times";
+      "button" : {"content": "My resume over here", "url": "venglish"}
+    }
+  ],
+
+  "contact" : [
+    {
+      "title":"Get in touch",
+      "description": "You need my services to create a flyer, a brochure, a brand identity, an illustration, a web design, for a small or bigger project ? You just need some informations ? Contact me, I would be happy to talk & work with you!",
+      "button": "contact me"
+    }
+  ],
+  "footer" : {
+      "copyright": "©Laura Duhamel - 2022 All reserved rights"
+  }
+
+
+
+}

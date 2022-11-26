@@ -176,7 +176,7 @@ section.works {
 
   div.flex-container {
     display: flex;
-    gap:48px;
+    gap: 48px;
     vertical-align: top;
 
     img {
@@ -186,94 +186,161 @@ section.works {
 
   }
 
-  div.grid-container {
-    display: grid;
+
+  div.project-container {
     border: solid 2px $blue;
+    position: relative;
     margin-bottom: 64px;
-    grid-auto-rows: minmax(0, auto);
 
-  &.left {
-    grid-template-areas: "number image"
-                          "name image";
-
-    .grid-item-3 {
-        justify-content: end;
-    }
-
-
-
-  }
-    &.right {
-      grid-template-areas: "image number"
-                          "image name";
-    }
-
-    .over {
-      display: none;
-    }
-
-    .grid-item-1 {
-      grid-area: number;
-      font-family: $title;
-      font-size: 155px;
-      line-height: 155px;
-
-    }
-
-    .grid-item-2 {
-      grid-area: name;
+    h3 {
       font-family: $title;
       font-size: 20px;
       line-height: 27px;
       text-transform: lowercase;
     }
 
-    .grid-item-3 {
-      grid-area: image;
-      display: flex;
-
-    }
-
-    .grid-item-4 {
-      grid-area: paragraph;
-
-    }
-
-    .grid-item-5 {
-      grid-area: line;
-    }
-
-    .grid-item-6 {
-      grid-area: category;
+    p.number {
+        font-family: $title;
+        font-size: 155px;
+        line-height: 155px;
+      margin-bottom: -14px;
     }
 
 
-    &:hover {
+    div.grid-container {
+    display: grid;
+    grid-auto-rows: minmax(0, auto);
+
+      .grid-item-1 {
+        grid-area: intro;
+        display: flex;
+        padding: 0 32px;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .grid-item-2 {
+        grid-area: image;
+        display: flex;
+
+      }
+      &.left {
+      grid-template-areas: "intro image";
+
+      .grid-item-2 {
+        justify-content: end;
+      }
+
+    }
+      &.right {
+      grid-template-areas: "image intro";
+
+      .grid-item-1 {
+        text-align: right;
+      }
+
+
+    }
+
+    }
+    .overlay {
+      display: grid;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      align-items: center;
+      top: 0;
+      bottom: 0;
+      transition: all 1s;
+      background: rgba(15, 15, 238, 0.95);
+      color: $white;
+      grid-template-columns: repeat(4, min-content);
+      column-gap: 32px;
+      padding: 0 32px;
+      animation: slide-in 4s both;
+
 
       &.left {
-        grid-template-areas: "number name line category image"
-                          "number paragraph line category image";
+        grid-template-areas: "number descriptif line category";
+        left: 0;
+        right: 200px;
+
+
       }
 
       &.right {
-        grid-template-areas: "image number name line category"
-                          "image number paragraph line category";
-      }
-
-      .over {
-        display: grid;
-        animation-timing-function: ease-out;
-        animation-duration: 300ms;
+        grid-template-areas: "category line descriptif number";
+        left: 200px;
+        right: 0;
+        text-align: right;
 
       }
+
+      .grid-item-1 {
+        grid-area: number;
+      }
+      .grid-item-2 {
+        grid-area: descriptif;
+        min-width: 350px;
+
+        h3 {
+          margin-bottom: 12px;
+        }
+
+      }
+
+      .grid-item-3 {
+        grid-area: line;
+        grid-template-columns: 50px;
+        display: flex;
+
+        span {
+          margin: auto;
+        }
+
+      }
+
+      .grid-item-4 {
+        grid-area: category;
+        display: flex;
+        text-transform: lowercase;
+        font-family: $title;
+        font-size: 13px;
+        line-height: 18px;
+        margin: 16px auto;
+
+        > ul {
+          margin: auto;
+          display: grid;
+          gap: 5px;
+
+        }
+
+
+      }
+    }
+
+    &:hover {
+      cursor: url(../img/icon.svg), auto;
+
+      .grid-container .grid-item-1 {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
+      .overlay {
+        visibility: visible;
+        opacity: 1;
+        margin: auto;
+
+      }
+
+
 
     }
 
 
   }
-
-
-
 }
 
 
@@ -487,4 +554,16 @@ span {
 
   }
 
+}
+
+
+//animation
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }

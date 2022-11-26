@@ -1,0 +1,81 @@
+
+{
+
+  "menu": [
+    {
+      "works": "projets",
+      "contact": "contact"
+    }
+  ],
+
+  "home": [
+    {
+      "hey": "Hey, enchanté, moi c'est",
+      "who": "une designer graphiste en freelance",
+      "button": "découvre mon portfolio"
+    }
+  ],
+
+  "work": [
+    {
+      "title": "P<span>r</span>ojets",
+      "description": "Over here, is my work as a graphic and an illustrator, have a pleasant visit!"
+    }
+  ],
+
+
+  "projects" : [
+   {
+    "name" : "Louise, art en entreprises",
+    "description" : "Lorempsum bmablabla",
+    "image": {"url":"louise.png", "alt": "bannière du projet louise"},
+    "categories": ["Branding"]
+  },
+
+  {
+    "name" : "Main St",
+    "description" : "Lorempsum bmablabla",
+    "image": {"url":"main-st.png", "alt": "bannière du projet Main St"},
+    "categories": ["Branding", "Web design", "Brochure"]
+  },
+
+  {
+    "name" : "Feu de dragon",
+    "description" : "Lorempsum bmablabla",
+    "image": {"url":"feu-de-dragon.png", "alt": "bannière du projet Feu de dragon"},
+    "categories": ["Illustration"]
+  },
+
+  {
+    "name" : "Ces âmes",
+    "description" : "Lorempsum bmablabla",
+    "image": {"url":"ces-ames.png", "alt": "bannière du projet Ces âmes"},
+    "categories": ["Web design", "Branding"]
+  }
+],
+
+  "about" : [
+    {
+      "title": "A<span>b</span>out me",
+      "subtitle": "Moi c'est Laura Duhamel, alias Lau.",
+      "list": ["Je suis française", "Je suis vingtennaire", "Je suis graphiste designer", "Je suis illustratratice"];
+      "socialmedia" : "Je suis sur",
+      "description" : "Pour en dire un peu plus, je suis une passionnée, une motivée, un peu folle, un peu ennuyante, un peu pénible parfois, mais je suis moi et j'essaye de faire de mon mieux. Je pense que la perfection n'existe pas, alors mon but est de m'en rapprocher";
+      "button" : {"content": "Mon curriculum vitae ici", "url": "cv_fr"}
+    }
+  ],
+
+  "contact" : [
+    {
+      "title":"Restons en contact",
+      "description": "Vous avez besoin de mes services pour un flyer, une brochure, une identité de marque, une illustration, un design de site web, pour un grand ou petit projet ? Ou vous avez juste besoin d'informations ? N'hésitez pas à me contacter, je serais heureuse de parler et de travailler avec vous !",
+      "button": "contact me"
+    }
+  ],
+  "footer" : {
+      "copyright": "©Laura Duhamel - 2022 Tous droits réservés"
+  }
+
+
+
+}

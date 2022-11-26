@@ -25,6 +25,9 @@
 </head>
 <body>
 
+<?php include "content.php"; ?>
+
+
 <header>
     <div class="wrap">
             <div class="right">
@@ -40,4 +43,5 @@
             </div>
     </div>
 </header>
+
 
