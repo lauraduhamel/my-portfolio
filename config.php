@@ -2,10 +2,16 @@
 
 <?php
 
+
+//LANGUAGE
+
+
+
+//JSON DATA
+
 $filename = './data/data-en.json';
 $data = file_get_contents($filename);
 $users = json_decode($data);
-
 
 function console_log($output, $with_script_tags = true)
 {
@@ -19,16 +25,13 @@ function console_log($output, $with_script_tags = true)
 
 console_log($users);
 
-
-/*
-$home = '$users->home';
-$work = '$users->work';
-$projects = '$users->projects';
-$about = '$users->about';
-$contacts = '$users->contact';
-$footer = '$users->footer';
-$menu = $users['menu'];
-
+$home = $users->home;
+$work = $users->work;
+$projects = $users->projects;
+$about = $users->about;
+$contact = $users->contact;
+$footer = $users->footer;
+$menu = $users->menu;
 
 /*
 <?php foreach ($users as $user) { ?>
@@ -46,14 +49,11 @@ $menu = $users['menu'];
     <?php } ?>
     </div>
 
-
-
-
-<?php } ?>
-
 */
 
-?>
+
+ ?>
+
 
 
 

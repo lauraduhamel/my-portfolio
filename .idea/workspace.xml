@@ -13,8 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -36,8 +37,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/xampp/htdocs/www/data",
+    "list.type.of.created.stylesheet": "SCSS",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "inlay.hints",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -51,6 +53,7 @@
       <recent name="C:\xampp\htdocs\www\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\www\js" />
       <recent name="C:\xampp\htdocs" />
       <recent name="C:\xampp\htdocs\" />
       <recent name="C:\Users\laura\OneDrive\_FREELANCE\3 - Portfolio\www\js" />
@@ -85,7 +88,7 @@
       <workItem from="1668311081434" duration="3340000" />
       <workItem from="1668960407702" duration="37192000" />
       <workItem from="1669131077577" duration="6941000" />
-      <workItem from="1669262300982" duration="23501000" />
+      <workItem from="1669262300982" duration="38372000" />
     </task>
     <servers />
   </component>

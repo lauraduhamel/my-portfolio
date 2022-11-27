@@ -19,28 +19,49 @@
     <link rel="icon" type="image/x-icon" href="img/logo.svg">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="js/libs/jquery-3.6.0.min.js"></script>
+    <script src="js/libs/jquery-3.6.1.js"></script>
+    <script src="js/animation.js"></script>
     <script src="js/menu.js"></script>
+
+
 
 </head>
 <body>
 
-<?php include "content.php"; ?>
+<?php include "config.php"; ?>
+
 
 
 <header>
     <div class="wrap">
+        <div class="header-pc">
             <div class="right">
                 <a href="#home"><img src="img/icon.svg" alt="icon Lau"></a>
             </div>
             <div class="left">
                 <ul>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#works"><?php echo($menu->works); ?></a></li>
+                    <li><a href="#contact"><?php echo($menu->contact); ?></a></li>
                     <li><a href="https://www.linkedin.com/in/lauraduhamel/"><img src="img/linkedin-icon.png" alt="linkedin icon"></a></li>
                     <li><a href="https://www.behance.net/lauraduhamel"><img src="img/behance-icon.png" alt="behance icon"></a></li>
                 </ul>
             </div>
+        </div>
+        <div class="header-mobile">
+            <div class="right">
+                <a href="#home"><img src="img/icon.svg" alt="icon Lau"></a>
+            </div>
+            <div class="left">
+                <img src="img/hamburger-icon.svg" alt="hamburger icon">
+                <div class="overlay">
+
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
 </header>
 

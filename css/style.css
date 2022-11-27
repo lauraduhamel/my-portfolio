@@ -169,9 +169,6 @@ main .wrap > div {
   display: flex;
   flex-direction: column;
 }
-main .wrap > div span {
-  margin: 12px auto;
-}
 main .wrap > div img {
   margin-bottom: 12px;
   max-width: 400px;
@@ -246,7 +243,6 @@ section.works div.project-container .overlay {
   grid-template-columns: repeat(4, min-content);
   column-gap: 32px;
   padding: 0 32px;
-  animation: slide-in 4s both;
 }
 section.works div.project-container .overlay.left {
   grid-template-areas: "number descriptif line category";

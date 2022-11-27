@@ -1,5 +1,5 @@
 <script>
-    /*
+    /Z
     // List of sentences
     var _CONTENT = ["laura duhamel.", "étudiante en multimédia.", "designer graphiste.", "débordante d'idées."];
 
@@ -53,7 +53,6 @@
 }, 200);
 }
 }
-
     // Start the typing effect on load
     _INTERVAL_VAL = setInterval(Type, 100);
     */

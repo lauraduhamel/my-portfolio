@@ -3,15 +3,16 @@
 <?php include "header.php"; ?>
 
 
+
     <main id="home">
         <div class="wrap">
             <div>
-                <p>Hey, nice to meet you, I'm</p>
+                <p><?php echo($home->hey); ?></p>
                 <img src="img/logo.svg" alt="lau logo">
-                <h1>a graphic designer in freelance</h1>
+                <h1><?php echo($home->who); ?><</h1>
                 <span class="line"></span>
                 <div class="button">
-                    <a href="#works" class="light">Discover my portfolio</a>
+                    <a href="#works" class="light"><?php echo($home->button); ?></a>
                 </div>
             </div>
         </div>
@@ -21,8 +22,8 @@
         <div class="wrap">
              <div class="flex-container">
                  <div class="text">
-                    <h2>Wo<span>r</span>ks</h2><span></span>
-                    <p>Over here, is my work as a graphic and an illustrator, have a pleasant visit! </p>
+                    <h2><?php echo($work->title); ?></h2>
+                    <p><?php echo($work->description); ?></p>
                  </div>
                  <img src="img/works-icon.svg" class="icon" alt="icon of a picture">
             </div>
@@ -97,7 +98,7 @@
             </div>
 
             <span class="line dark"></span>
-            <div class="button"><a href="https://www.behance.net/lauraduhamel" class="dark">See more on my behance</a></div>
+            <div class="button"><a href="https://www.behance.net/lauraduhamel" class="dark"><?php echo($work->button); ?></a></div>
         </div>
     </section>
 
@@ -105,32 +106,33 @@
         <div class="wrap">
             <div class="grid-container">
                 <div class="grid-item-1">
-                    <h2>A<span>b</span>out me</h2>
-                    <p>I'm Laura Duhamel, alias Lau</p>
+                    <h2><?php echo($about->title); ?></h2>
+                    <p><?php echo($about->subtitle); ?></p>
                 </div>
                 <div class="grid-item-2">
                     <div>
                         <span class="line"></span>
                         <ul>
-                            <li>I'm french.</li>
-                            <li>I'm 20 years old.</li>
-                            <li>I'm a graphic designer.</li>
-                            <li>I'm an illustrator.</li>
+                            <?php foreach ($about->list as $list) { ?>
+                            <li><?php echo($list); ?></li>
+                            <?php } ?>
                         </ul>
                         <p>&</p>
                         <ul>
-                            <li>I'm on <a href="https://www.behance.net/lauraduhamel">Behance</a>.</li>
-                            <li>I'm on <a href="https://www.linkedin.com/in/lauraduhamel/">Linkedin</a>.</li>
-                            <li>I'm on <a href="">Pinterest</a>.</li>
+                            <li><?php echo($about->socialmedia); ?> <a href="https://www.behance.net/lauraduhamel">Behance</a>.</li>
+                            <li><?php echo($about->socialmedia); ?> <a href="https://www.linkedin.com/in/lauraduhamel/">Linkedin</a>.</li>
+                            <li><?php echo($about->socialmedia); ?> <a href="">Pinterest</a>.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="grid-item-3">
-                    <img src="img/profile-animation.gif" alt="Animation of an illustration of myself">
+                    <img id="gif" src="img/profile-animation.gif" alt="Animation of an illustration of myself">
                 </div>
                 <div class="grid-item-4">
-                    <p>To expend, I’m a passionate, a motivated, a little crazy, a little boring, a little annoying, but I’m myself and I’m trying to do my best everytime. I think that perfection doesn’t exist and design help me in my life, everyday, every times</p>
-                    <div class="button"><a class="light" href="pdf/laura_duhamel_cv.pdf" target="_blank">my resume over here</a></div>
+                    <p><?php echo($about->description); ?></p>
+                    <div class="button">
+                        <a class="light" href="pdf/<?php echo($about->button->url); ?>.pdf" target="_blank"><?php echo($about->button->content); ?></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,15 +142,14 @@
         <div class="wrap">
             <div class="grid-container">
                     <div class="grid-item grid-item-1">
-                        <h2>Get in t<span>o</span>uch</h2>
+                        <h2><?php echo($contact->title); ?></h2>
                     </div>
                 <div class="grid-item grid-item-2">
-                        <p>You need my services to create a flyer, a brochure, a brand identity, an illustration, a webdesign, for a small or bigger project ? You just need some informations ?
-                            Contact me, I would be happy to talk & work with you!</p>
+                        <p><?php echo($contact->description); ?></p>
                     </div>
                     <div class="grid-item grid-item-3">
                         <span class="line dark"></span>
-                        <div class="button"><a href="mailto:contact@lauraduhamel.com" class="dark">contact me</a></div>
+                        <div class="button"><a href="mailto:contact@lauraduhamel.com" class="dark"><?php echo($contact->button); ?></a></div>
                     </div>
                 <div class="grid-item grid-item-4">
                         <img src="img/email-icon.svg" class="icon" alt="icon of an email">

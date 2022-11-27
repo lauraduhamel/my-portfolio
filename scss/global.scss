@@ -151,9 +151,6 @@ main {
       display: flex;
       flex-direction: column;
 
-      span {
-        margin: 12px auto;
-      }
 
       img {
         margin-bottom: 12px;
@@ -256,7 +253,6 @@ section.works {
       grid-template-columns: repeat(4, min-content);
       column-gap: 32px;
       padding: 0 32px;
-      animation: slide-in 4s both;
 
 
       &.left {
