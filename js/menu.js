@@ -1,18 +1,31 @@
 
-/*
+
+
+
 const button = $('button.hamburger');
 const backdrop = $('.cover');
 
 
 function overlay() {
-    $('nav').addClass('open');
+    $('div.overlay').addClass('open');
     $('body').css('overflow-y', 'hidden');
 }
 
-function fond() {
-    $('nav').removeClass('open');
+function background() {
+    $('div.overlay').removeClass('open');
     $('body').css('overflow-y', 'auto');
 }
+
+$( document ).ready(function() {
+
+    if (window.matchMedia('(max-width: 767px)').matches)  {
+        function overflow() {
+            $('body').css('overflow-y', 'auto');
+        }
+    }
+
+});
+
 
 
 //transition

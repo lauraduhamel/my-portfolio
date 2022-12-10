@@ -1,5 +1,9 @@
 
 {
+  "head":
+  {
+    "title": "Portfolio de Laura Duhamel"
+  },
 
   "menu":
     {
@@ -10,7 +14,7 @@
   "home":
     {
       "hey": "Hey, enchanté, moi c'est",
-      "who": "une designer graphiste en freelance",
+      "who": "L<span>a</span>ura Duhamel",
       "button": "découvre mon portfolio"
     },
 
@@ -34,7 +38,7 @@
   {
     "name" : "Main St",
     "link": "https://www.behance.net/gallery/152688227/Louise-art-en-entreprise",
-    "description" : "Lorempsum bmablabla",
+    "description" : "Main St. est un bar à jeux de société situé près de New York. Le café est un lieu de rencontre cozy qui propose plus de 300 jeux, des évènements chaque semaine pour les adultes, mais é au mieux de ce moment",
     "image": {"url":"main-st.png", "alt": "bannière du projet Main St"},
     "categories": ["Branding", "Web design", "Brochure"]
   },
@@ -56,16 +60,15 @@
   }
 ],
 
-  "about" : [
+  "about" :
     {
       "title": "A<span>b</span>out me",
       "subtitle": "Moi c'est Laura Duhamel, alias Lau.",
-      "list": ["Je suis française", "Je suis vingtennaire", "Je suis graphiste designer", "Je suis illustratratice"];
+      "list": ["Je suis française", "Je suis vingtennaire", "Je suis graphiste designer", "Je suis illustratrice"],
       "socialmedia" : "Je suis sur",
-      "description" : "Pour en dire un peu plus, je suis une passionnée, une motivée, un peu folle, un peu ennuyante, un peu pénible parfois, mais je suis moi et j'essaye de faire de mon mieux. Je pense que la perfection n'existe pas, alors mon but est de m'en rapprocher";
+      "description" : "Pour en dire un peu plus, je suis une passionnée, une motivée, un peu folle, un peu ennuyante, un peu pénible parfois, mais je suis moi et j'essaye de faire de mon mieux. Je pense que la perfection n'existe pas, alors mon but est de m'en rapprocher",
       "button" : {"content": "Mon curriculum vitae ici", "url": "cv_fr"}
-    }
-  ],
+    },
 
   "contact" :
     {

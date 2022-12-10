@@ -1,0 +1,44 @@
+//button
+
+div.button {
+  display: flex;
+
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+
+    &.dark {
+      border: 2px solid $blue;
+    }
+
+    &.light {
+      border: 2px solid $white;
+    }
+
+  }
+
+}
+
+
+
+//line
+
+span {
+
+
+  &.line {
+    border-left: 2px solid $white;
+    height: 150px;
+    display: block;
+    margin:12px auto;
+
+    &.dark {
+      border-left: 2px solid $blue;
+    }
+
+  }
+
+}

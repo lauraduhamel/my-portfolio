@@ -3,11 +3,12 @@
 
 $blue : #0F0FEE;
 $white : #FFFFFF;
+$yellow : yellow;
 $title : 'ED Nimpkish';
 $paragraph : 'Inter';
 
 
-//Import
+//Import font
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
@@ -54,16 +55,16 @@ h2 {
 
 }
 
+
 section, main {
   padding: 96px 0;
 
   &.works, &.contact {
-      color: $blue;
-      background: $white;
+    color: $blue;
+    background: $white;
 
     a {
       color: $blue;
-
     }
 
   }
@@ -78,454 +79,24 @@ section, main {
 }
 
 
-header {
-  background: rgb(15, 15, 238, 0.90);
-  z-index: 2;
-  padding: 16px 0;
-  position: fixed;
-  width: 100vw;
-
-  * {
-    display: flex;
-    align-items: center;
-  }
-
-  img {
-    width: 20px;
-  }
-
-  > .wrap {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .left {
-    > ul {
-      display: flex;
-      gap: 32px;
-    }
-  }
-}
-
-//button
-
-div.button {
-  display: flex;
-
-
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 16px;
-
-    &.dark {
-      border: 2px solid $blue;
-    }
-
-    &.light {
-      border: 2px solid $white;
-    }
-
-  }
-
-}
 
 
 
-
-
-main {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-
-  p, h1 {
-    margin-bottom: 12px;
-  }
-
+@media all and (max-width: 1024px) {
   .wrap {
-
-    > div {
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-
-
-      img {
-        margin-bottom: 12px;
-        max-width: 400px;
-      }
-
-      div.button {
-        justify-content: center;
-      }
-
-    }
-
+    max-width: 900px;
+    margin: auto;
+    padding: 0 72px;
   }
 
-}
-
-//section works projects
-
-section.works {
-
-  div.flex-container {
-    display: flex;
-    gap: 48px;
-    vertical-align: top;
-
-    img {
-      transform: rotate(18deg);
-    }
-
-
-  }
-
-
-  div.project-container {
-    border: solid 2px $blue;
-    position: relative;
-    margin-bottom: 64px;
-
-    h3 {
-      font-family: $title;
-      font-size: 20px;
-      line-height: 27px;
-      text-transform: lowercase;
-    }
-
-    p.number {
-        font-family: $title;
-        font-size: 155px;
-        line-height: 155px;
-      margin-bottom: -14px;
-    }
-
-
-    div.grid-container {
-    display: grid;
-    grid-auto-rows: minmax(0, auto);
-
-      .grid-item-1 {
-        grid-area: intro;
-        display: flex;
-        padding: 0 32px;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .grid-item-2 {
-        grid-area: image;
-        display: flex;
-
-      }
-      &.left {
-      grid-template-areas: "intro image";
-
-      .grid-item-2 {
-        justify-content: end;
-      }
-
-    }
-      &.right {
-      grid-template-areas: "image intro";
-
-      .grid-item-1 {
-        text-align: right;
-      }
-
-
-    }
-
-    }
-    .overlay {
-      display: grid;
-      visibility: hidden;
-      opacity: 0;
-      position: absolute;
-      align-items: center;
-      top: 0;
-      bottom: 0;
-      transition: all 1s;
-      background: rgba(15, 15, 238, 0.95);
-      color: $white;
-      grid-template-columns: repeat(4, min-content);
-      column-gap: 32px;
-      padding: 0 32px;
-
-
-      &.left {
-        grid-template-areas: "number descriptif line category";
-        left: 0;
-        right: 200px;
-
-
-      }
-
-      &.right {
-        grid-template-areas: "category line descriptif number";
-        left: 200px;
-        right: 0;
-        text-align: right;
-
-      }
-
-      .grid-item-1 {
-        grid-area: number;
-      }
-      .grid-item-2 {
-        grid-area: descriptif;
-        min-width: 350px;
-
-        h3 {
-          margin-bottom: 12px;
-        }
-
-      }
-
-      .grid-item-3 {
-        grid-area: line;
-        grid-template-columns: 50px;
-        display: flex;
-
-        span {
-          margin: auto;
-        }
-
-      }
-
-      .grid-item-4 {
-        grid-area: category;
-        display: flex;
-        text-transform: lowercase;
-        font-family: $title;
-        font-size: 13px;
-        line-height: 18px;
-        margin: 16px auto;
-
-        > ul {
-          margin: auto;
-          display: grid;
-          gap: 5px;
-
-        }
-
-
-      }
-    }
-
-    &:hover {
-      cursor: url(../img/icon.svg), auto;
-
-      .grid-container .grid-item-1 {
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.3s;
-      }
-
-      .overlay {
-        visibility: visible;
-        opacity: 1;
-        margin: auto;
-
-      }
-
-
-
-    }
-
-
-  }
-}
-
-
-
-//section about me
-
-section.about {
-
-
-  img {
-    max-width: 500px;
-  }
-
-  div.button {
-    justify-content: center;
-  }
-
-   div.grid-container {
-     display: grid;
-     grid-column: 2;
-     grid-template-areas: ". header"
-                          "profile list"
-                          "info . ";
-
-     .grid-item-1 {
-       grid-area: header;
-     }
-
-     .grid-item-2 {
-       grid-area: list;
-       display: inline-flex;
-       margin-left:20%;
-
-       > div {
-         display: flex;
-         flex-direction: column;
-         justify-items: center;
-       }
-
-       li {
-         margin : 6px;
-       }
-
-       p {
-         margin: 24px 0;
-       }
-
-       span.line {
-         margin:12px 0 12px 24px; //take off to center the line
-       }
-
-     }
-
-     .grid-item-3 {
-       grid-area: profile;
-       display: flex;
-       justify-content: center;
-     }
-
-     .grid-item-4 {
-       grid-area: info;
-
-       p {
-         margin: 12px auto 48px auto;
-
-       }
-
-     }
-
-
-  }
-
-
-}
-
-
-
-//section get in touch - contact
-
-section.contact {
-
-  h3 {
-    text-align: left;
-    font-family: $title;
-    font-size: 64px;
-    line-height: 70px;
-
-    &:last-of-type {
-      font-size: 24px;
-      line-height: 30px;
-    }
-
-  }
-
-  div.grid-container {
-    display: grid;
-    grid-column: 3;
-    grid-auto-columns: minmax(15px, auto);
-    grid-template-areas: "title title ."
-                          "paragraph . ."
-                          "toggle contact contact";
-
-
-
-    .grid-item-1 {
-      grid-area: title;
-    }
-
-    .grid-item-2 {
-      grid-area: paragraph;
-
-    }
-
-    .grid-item-3 {
-      grid-area: toggle;
-      display: flex;
-      flex-direction: column;
-
-
-      div.button {
-        justify-content: center;
-      }
-
-
-
-    }
-
-    .grid-item-4 {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      grid-area: contact;
-      align-self: end;
-
-      img {
-        transform: rotate(10deg);
-      }
-
-
-    }
-
-  }
-
-}
-
-
-
-
-// footer
-
-footer {
-  padding: 64px 0 32px 0;
-
-  div.language {
-display: flex;
-
-    p a {
-      text-transform: uppercase;
-    }
-
-    span::after {
-      display: block;
-      content: "|";
-      color: $white;
-      padding: 0 6px;
-    }
-
-  }
-
-  p {
+  h2 {
+    font-size: 112px;
+    line-height: 112px;
+    margin: auto;
     text-align: center;
-  }
-
-   div.container {
-    display: flex;
-    margin-bottom: 32px;
-
-     > div {
-
-       &:first-of-type {
-         margin: auto;
-       }
-
-       &:nth-of-type(2) {
-
-       }
-     }
 
   }
+
 
 }
 
@@ -533,24 +104,6 @@ display: flex;
 
 
 
-//decoration element
-
-span {
-
-
-  &.line {
-    border-left: 2px solid $white;
-    height: 100px;
-    display: block;
-    margin:12px auto;
-
-    &.dark {
-      border-left: 2px solid $blue;
-    }
-
-  }
-
-}
 
 
 //animation

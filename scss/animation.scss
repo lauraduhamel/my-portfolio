@@ -1,0 +1,28 @@
+
+
+
+* {
+
+  ::selection {
+    background: $yellow;
+    color: $blue;
+  }
+}
+
+
+*.works, *.contact {
+
+  &::selection {
+    background: $blue;
+    color: $white;
+  }
+}
+
+
+@keyframes slide {
+
+0% {
+width: 0;
+}
+
+}

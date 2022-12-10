@@ -117,29 +117,27 @@ section.works a, section.contact a, main.works a, main.contact a {
   padding: 0 112px;
 }
 
-header {
-  background: rgba(15, 15, 238, 0.9);
-  z-index: 2;
-  padding: 16px 0;
-  position: fixed;
-  width: 100vw;
+@media all and (max-width: 1024px) {
+  .wrap {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 72px;
+  }
+  h2 {
+    font-size: 112px;
+    line-height: 112px;
+    margin: auto;
+    text-align: center;
+  }
 }
-header * {
-  display: flex;
-  align-items: center;
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
-header img {
-  width: 20px;
-}
-header > .wrap {
-  display: flex;
-  justify-content: space-between;
-}
-header .left > ul {
-  display: flex;
-  gap: 32px;
-}
-
 div.button {
   display: flex;
 }
@@ -156,6 +154,90 @@ div.button a.light {
   border: 2px solid #FFFFFF;
 }
 
+span.line {
+  border-left: 2px solid #FFFFFF;
+  height: 150px;
+  display: block;
+  margin: 12px auto;
+}
+span.line.dark {
+  border-left: 2px solid #0F0FEE;
+}
+
+header a.mobile {
+  display: flex;
+  justify-content: center;
+}
+header img.logo {
+  width: 40px;
+}
+header .header-pc {
+  background: rgba(15, 15, 238, 0.9);
+  z-index: 2;
+  padding: 16px 0;
+  position: fixed;
+  width: 100vw;
+}
+header .header-pc * {
+  display: flex;
+  align-items: center;
+}
+header .header-pc > .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-pc .left nav > ul {
+  display: flex;
+  gap: 32px;
+}
+header .header-mobile {
+  display: none;
+  padding: 16px 0;
+  width: 100vw;
+  position: fixed;
+  background: rgba(15, 15, 238, 0.9);
+  z-index: 2;
+}
+header .header-mobile .container .menu-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-mobile .overlay {
+  display: none;
+}
+
+@media all and (max-width: 1024px) {
+  header .header-pc {
+    display: none;
+  }
+  header .header-mobile {
+    display: block;
+  }
+}
+/*
+
+@media all and (max-width: 1200px) {
+
+
+}
+
+@media all and (max-width: 1024px) {
+
+
+}
+
+@media all and (max-width: 767px) {
+
+
+}
+
+@media all and (max-width: 480px) {
+
+
+}
+
+*/
 main {
   height: 100vh;
   display: grid;
@@ -164,10 +246,20 @@ main {
 main p, main h1 {
   margin-bottom: 12px;
 }
+main h1 {
+  font-family: "ED Nimpkish";
+  font-size: 130px;
+  line-height: 140px;
+  text-transform: lowercase;
+}
+main h1 span {
+  text-transform: uppercase;
+}
 main .wrap > div {
   margin: auto;
   display: flex;
   flex-direction: column;
+  margin-top: 5vw;
 }
 main .wrap > div img {
   margin-bottom: 12px;
@@ -177,6 +269,13 @@ main .wrap > div div.button {
   justify-content: center;
 }
 
+section.works .wrap > div.line {
+  margin-left: 20%;
+  margin-bottom: 64px;
+}
+section.works div.button {
+  justify-content: center;
+}
 section.works div.flex-container {
   display: flex;
   gap: 48px;
@@ -186,9 +285,16 @@ section.works div.flex-container img {
   transform: rotate(18deg);
 }
 section.works div.project-container {
-  border: solid 2px #0F0FEE;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   position: relative;
-  margin-bottom: 64px;
+  margin: auto;
+  margin-bottom: 48px;
+  max-width: 1000px;
+}
+section.works div.project-container img {
+  object-fit: cover;
+  width: 600px;
+  height: 300px;
 }
 section.works div.project-container h3 {
   font-family: "ED Nimpkish";
@@ -216,6 +322,7 @@ section.works div.project-container div.grid-container .grid-item-1 {
 section.works div.project-container div.grid-container .grid-item-2 {
   grid-area: image;
   display: flex;
+  flex-direction: column;
 }
 section.works div.project-container div.grid-container.left {
   grid-template-areas: "intro image";
@@ -223,37 +330,58 @@ section.works div.project-container div.grid-container.left {
 section.works div.project-container div.grid-container.left .grid-item-2 {
   justify-content: end;
 }
+section.works div.project-container div.grid-container.left .grid-item-2 img {
+  align-self: end;
+}
 section.works div.project-container div.grid-container.right {
   grid-template-areas: "image intro";
 }
 section.works div.project-container div.grid-container.right .grid-item-1 {
   text-align: right;
 }
+section.works div.project-container:hover {
+  cursor: url(../img/icon.svg), auto;
+}
+section.works div.project-container:hover .grid-container .grid-item-1 {
+  visibility: hidden;
+  opacity: 0;
+}
+section.works div.project-container:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+  margin: auto;
+  width: 100%;
+}
 section.works div.project-container .overlay {
   display: grid;
+  align-items: center;
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  align-items: center;
   top: 0;
   bottom: 0;
-  transition: all 1s;
+  transition: all 2s;
   background: rgba(15, 15, 238, 0.95);
   color: #FFFFFF;
   grid-template-columns: repeat(4, min-content);
   column-gap: 32px;
   padding: 0 32px;
+  width: 0;
+}
+section.works div.project-container .overlay .text {
+  transition: width 0.3s, opacity 1s, visibility 0.01s;
+  transition-delay: 10s;
 }
 section.works div.project-container .overlay.left {
   grid-template-areas: "number descriptif line category";
   left: 0;
-  right: 200px;
+  padding-right: 20%;
 }
 section.works div.project-container .overlay.right {
   grid-template-areas: "category line descriptif number";
-  left: 200px;
-  right: 0;
+  padding-left: 20%;
   text-align: right;
+  right: 0;
 }
 section.works div.project-container .overlay .grid-item-1 {
   grid-area: number;
@@ -287,20 +415,59 @@ section.works div.project-container .overlay .grid-item-4 > ul {
   display: grid;
   gap: 5px;
 }
-section.works div.project-container:hover {
-  cursor: url(../img/icon.svg), auto;
-}
-section.works div.project-container:hover .grid-container .grid-item-1 {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s;
-}
-section.works div.project-container:hover .overlay {
-  visibility: visible;
-  opacity: 1;
-  margin: auto;
-}
 
+@media all and (max-width: 1024px) {
+  section.works div.line {
+    display: flex;
+  }
+  section.works div.flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.works div.project-container {
+    max-width: 500px;
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+  }
+  section.works div.project-container .overlay {
+    display: none;
+  }
+  section.works div.project-container div.grid-container.right .grid-item-1 {
+    justify-content: end;
+  }
+  section.works div.project-container div.grid-container.right .grid-item-1 p {
+    order: 2;
+  }
+  section.works div.project-container div.grid-container.left .grid-item-1 {
+    justify-content: start;
+  }
+  section.works div.project-container div.grid-container.left, section.works div.project-container div.grid-container.right {
+    grid-template-areas: "intro" "image";
+  }
+  section.works div.project-container div.grid-container.left .grid-item-1, section.works div.project-container div.grid-container.right .grid-item-1 {
+    padding: 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+  section.works div.project-container div.grid-container.left .grid-item-2, section.works div.project-container div.grid-container.right .grid-item-2 {
+    justify-content: center;
+  }
+  section.works div.project-container div.grid-container.left .grid-item-2 img, section.works div.project-container div.grid-container.right .grid-item-2 img {
+    align-self: center;
+  }
+  section.works div.project-container {
+    padding: 0;
+    left: auto;
+    right: auto;
+  }
+  section.works div.project-container img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
+}
 section.about img {
   max-width: 500px;
 }
@@ -309,7 +476,6 @@ section.about div.button {
 }
 section.about div.grid-container {
   display: grid;
-  grid-column: 2;
   grid-template-areas: ". header" "profile list" "info . ";
 }
 section.about div.grid-container .grid-item-1 {
@@ -337,15 +503,38 @@ section.about div.grid-container .grid-item-2 span.line {
 section.about div.grid-container .grid-item-3 {
   grid-area: profile;
   display: flex;
-  justify-content: center;
 }
 section.about div.grid-container .grid-item-4 {
   grid-area: info;
 }
 section.about div.grid-container .grid-item-4 p {
-  margin: 12px auto 48px auto;
+  margin: 12px 0 48px 0;
 }
 
+@media all and (max-width: 1024px) {
+  section.about div.grid-container {
+    display: grid;
+    grid-template-areas: "header" "profile" "list" "info";
+  }
+  section.about div.grid-container .grid-item-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  section.about div.grid-container .grid-item-1 p {
+    margin: auto;
+    margin-bottom: 48px;
+  }
+  section.about div.grid-container .grid-item-2 {
+    justify-content: center;
+    margin-left: 0;
+  }
+  section.about div.grid-container .grid-item-2 div:first-of-type {
+    display: flex;
+    order: 2;
+    justify-content: center;
+  }
+}
 section.contact h3 {
   text-align: left;
   font-family: "ED Nimpkish";
@@ -387,6 +576,16 @@ section.contact div.grid-container .grid-item-4 img {
   transform: rotate(10deg);
 }
 
+@media all and (max-width: 1024px) {
+  section.contact div.grid-container {
+    display: grid;
+    margin: auto;
+    grid-template-areas: "title" "paragraph" "contact" "toggle";
+  }
+  section.contact div.grid-container .grid-item-4 {
+    align-items: center;
+  }
+}
 footer {
   padding: 64px 0 32px 0;
 }
@@ -412,24 +611,59 @@ footer div.container {
 footer div.container > div:first-of-type {
   margin: auto;
 }
-span.line {
-  border-left: 2px solid #FFFFFF;
-  height: 100px;
-  display: block;
-  margin: 12px auto;
+@media all and (max-width: 1024px) {
+  footer div.container {
+    flex-direction: column;
+    gap: 48px;
+  }
+  footer div.language {
+    margin: auto;
+  }
 }
-span.line.dark {
-  border-left: 2px solid #0F0FEE;
+div.header-mobile div.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.header-mobile div.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.header-mobile nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0F0FEE;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+}
+div.header-mobile ul {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div.header-mobile ul li {
+  text-align: center;
+  margin-bottom: 24px;
+  animation: 0.3s print;
+}
+div.header-mobile ul li a {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  color: #FFFFFF;
 }
 
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
 /*
 //menu
 
@@ -505,7 +739,7 @@ nav {
 }
 
 //backdrop
-.cover  {
+.overlay  {
   position: fixed;
   top:0;
   bottom:0;
@@ -627,5 +861,20 @@ header {
 
 
 */
+* ::selection {
+  background: yellow;
+  color: #0F0FEE;
+}
+
+*.works::selection, *.contact::selection {
+  background: #0F0FEE;
+  color: #FFFFFF;
+}
+
+@keyframes slide {
+  0% {
+    width: 0;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

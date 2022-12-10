@@ -1,5 +1,69 @@
 
 
+div.header-mobile {
+
+  div.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  div.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  nav {
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: $blue;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+
+  ul {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    li {
+      text-align: center;
+      margin-bottom: 24px;
+      animation: .3s print;
+
+      a {
+        font-family: $paragraph;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 54px;
+        color: $white;
+
+
+      }
+    }
+  }
+
+
+
+
+
+}
+
+
+
+
 /*
 //menu
 
@@ -75,7 +139,7 @@ nav {
 }
 
 //backdrop
-.cover  {
+.overlay  {
   position: fixed;
   top:0;
   bottom:0;

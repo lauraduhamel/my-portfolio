@@ -1,0 +1,92 @@
+
+section.contact {
+
+  h3 {
+    text-align: left;
+    font-family: $title;
+    font-size: 64px;
+    line-height: 70px;
+
+    &:last-of-type {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+  }
+
+  div.grid-container {
+    display: grid;
+    grid-column: 3;
+    grid-auto-columns: minmax(15px, auto);
+    grid-template-areas: "title title ."
+                          "paragraph . ."
+                          "toggle contact contact";
+
+
+
+    .grid-item-1 {
+      grid-area: title;
+    }
+
+    .grid-item-2 {
+      grid-area: paragraph;
+
+    }
+
+    .grid-item-3 {
+      grid-area: toggle;
+      display: flex;
+      flex-direction: column;
+
+
+      div.button {
+        justify-content: center;
+      }
+
+
+
+    }
+
+    .grid-item-4 {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      grid-area: contact;
+      align-self: end;
+
+      img {
+        transform: rotate(10deg);
+      }
+
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+@media all and (max-width: 1024px) {
+
+  section.contact {
+    div.grid-container {
+      display: grid;
+      margin:auto;
+      grid-template-areas: "title"
+                          "paragraph"
+                          "contact"
+                          "toggle";
+
+      .grid-item-4 {
+        align-items: center;
+
+      }
+
+
+    }
+  }
+}

@@ -1,6 +1,11 @@
 
 {
 
+  "head":
+  {
+    "title": "Laura Duhamel's Portfolio"
+  },
+
   "menu":
     {
       "works": "works",
@@ -10,7 +15,7 @@
   "home":
     {
       "hey": "Hey, nice to meet you, I'm",
-      "who": "a graphic designer in freelance",
+      "who": "L<span>a</span>ura Duhamel",
       "button": "discover my portfolio"
     },
 

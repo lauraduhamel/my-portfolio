@@ -1,15 +1,11 @@
 
 
 <?php include "header.php"; ?>
-
-
-
     <main id="home">
         <div class="wrap">
             <div>
                 <p><?php echo($home->hey); ?></p>
-                <img src="img/logo.svg" alt="lau logo">
-                <h1><?php echo($home->who); ?><</h1>
+                <h1><?php echo($home->who); ?></h1>
                 <span class="line"></span>
                 <div class="button">
                     <a href="#works" class="light"><?php echo($home->button); ?></a>
@@ -27,77 +23,54 @@
                  </div>
                  <img src="img/works-icon.svg" class="icon" alt="icon of a picture">
             </div>
-            <span class="line dark"></span>
+            <div class="line"><span class="line dark"></span></div>
             <div class="projects">
-                <div class="project-container left">
-                <a href="https://www.behance.net/gallery/152688227/Louise-art-en-entreprise" target="_blank">
-                    <div class="grid-container left">
+
+                <?php foreach ($projects as $project) {
+                    $i++;
+                    ?>
+                <div class="project-container">
+                <a href="<?php echo($project->link);?>" target="_blank">
+                    <div class="grid-container">
                         <div class="grid-item-1">
-                            <p class="number">1</p>
-                            <h3>Louise art en entreprises</h3>
+                            <p class="number"><?php echo($i) ?></p>
+                            <h3><?php echo($project->name);?></h3>
                         </div>
                         <div class="grid-item-2">
-                            <img src="img/louise.png" alt="banner of louise art en entreprises">
+                            <img src="img/<?php echo($project->image->url);?>" alt="<?php echo($project->image->alt);?>">
                         </div>
                     </div>
-                    <div class="overlay left">
+                    <div class="overlay">
                             <div class="grid-item-1">
-                                <p class="number">1</p>
+                                <p class="number"><?php echo($i) ?></p>
                             </div>
                             <div class="grid-item-2">
-                                <h3>Louise art en entreprises</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
-                                    leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
+                                <h3><?php echo($project->name);?></h3>
+                                <p><?php echo($project->description);?></p>
                             </div>
                             <div class="grid-item-3">
                                 <span class="line light"></span>
                             </div>
                             <div class="grid-item-4">
                                 <ul>
-                                    <li>Branding</li>
-                                    <li>Webdesign</li>
+                                   <?php foreach ($project->categories as $category) { ?>
+                                    <li><?php echo($category);?></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>
                 </a>
                 </div>
-                <div class="project-container right">
-                    <a href="https://www.behance.net/gallery/152688227/Louise-art-en-entreprise" target="_blank">
-                        <div class="grid-container right">
-                            <div class="grid-item-1">
-                                <p class="number">2</p>
-                                <h3>Main St.</h3>
-                            </div>
-                            <div class="grid-item-2">
-                                <img src="img/main-st.png" alt="banner of louise art en entreprises">
-                            </div>
-                        </div>
-                        <div class="overlay right">
-                            <div class="grid-item-1">
-                                <p class="number">2</p>
-                            </div>
-                            <div class="grid-item-2">
-                                <h3>Main St.</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur. Tristique praesent dui pulvinar nibh massa ut porta
-                                    leo urna. Enim nunc vestibulum eu velit adipiscing.</p>
-                            </div>
-                            <div class="grid-item-3">
-                                <span class="line light"></span>
-                            </div>
-                            <div class="grid-item-4">
-                                <ul>
-                                    <li>Branding</li>
-                                    <li>Brochure</li>
-                                    <li>Webdesign</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <?php } ?>
+
+
+
+
+
 
             </div>
 
-            <span class="line dark"></span>
+            <div class="flex-container"><span class="line dark"></span></div>
             <div class="button"><a href="https://www.behance.net/lauraduhamel" class="dark"><?php echo($work->button); ?></a></div>
         </div>
     </section>
@@ -111,22 +84,24 @@
                 </div>
                 <div class="grid-item-2">
                     <div>
-                        <span class="line"></span>
-                        <ul>
-                            <?php foreach ($about->list as $list) { ?>
-                            <li><?php echo($list); ?></li>
-                            <?php } ?>
-                        </ul>
-                        <p>&</p>
-                        <ul>
-                            <li><?php echo($about->socialmedia); ?> <a href="https://www.behance.net/lauraduhamel">Behance</a>.</li>
-                            <li><?php echo($about->socialmedia); ?> <a href="https://www.linkedin.com/in/lauraduhamel/">Linkedin</a>.</li>
-                            <li><?php echo($about->socialmedia); ?> <a href="">Pinterest</a>.</li>
-                        </ul>
+                       <div><span class="line"></span></div>
+                        <div>
+                            <ul>
+                                <?php foreach ($about->list as $list) { ?>
+                                <li><?php echo($list); ?></li>
+                                <?php } ?>
+                            </ul>
+                            <p>&</p>
+                            <ul>
+                                <li><?php echo($about->socialmedia); ?> <a href="https://www.behance.net/lauraduhamel">Behance</a>.</li>
+                                <li><?php echo($about->socialmedia); ?> <a href="https://www.linkedin.com/in/lauraduhamel/">Linkedin</a>.</li>
+                                <li><?php echo($about->socialmedia); ?> <a href="">Pinterest</a>.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="grid-item-3">
-                    <img id="gif" src="img/profile-animation.gif" alt="Animation of an illustration of myself">
+                    <img id="gif" src="img/profile-animation-2.gif" alt="Animation of an illustration of myself">
                 </div>
                 <div class="grid-item-4">
                     <p><?php echo($about->description); ?></p>
@@ -141,13 +116,13 @@
     <section class="contact" id="contact">
         <div class="wrap">
             <div class="grid-container">
-                    <div class="grid-item grid-item-1">
+                    <div class="grid-item-1">
                         <h2><?php echo($contact->title); ?></h2>
                     </div>
-                <div class="grid-item grid-item-2">
+                <div class="grid-item-2">
                         <p><?php echo($contact->description); ?></p>
                     </div>
-                    <div class="grid-item grid-item-3">
+                    <div class="grid-item-3">
                         <span class="line dark"></span>
                         <div class="button"><a href="mailto:contact@lauraduhamel.com" class="dark"><?php echo($contact->button); ?></a></div>
                     </div>

@@ -1,0 +1,60 @@
+footer {
+  padding: 64px 0 32px 0;
+
+  div.language {
+    display: flex;
+
+    p a {
+      text-transform: uppercase;
+    }
+
+    span::after {
+      display: block;
+      content: "|";
+      color: $white;
+      padding: 0 6px;
+    }
+
+  }
+
+  p {
+    text-align: center;
+  }
+
+  div.container {
+    display: flex;
+    margin-bottom: 32px;
+
+    > div {
+
+      &:first-of-type {
+        margin: auto;
+      }
+
+      &:nth-of-type(2) {
+
+      }
+    }
+
+  }
+
+}
+
+
+
+
+
+@media all and (max-width: 1024px) {
+
+
+  footer div.container {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  footer div.language {
+    margin: auto;
+  }
+
+
+}

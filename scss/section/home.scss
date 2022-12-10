@@ -1,0 +1,44 @@
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  p, h1 {
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: $title;
+    font-size: 130px;
+    line-height: 140px;
+    text-transform: lowercase;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  .wrap {
+
+    > div {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 5vw;
+
+
+      img {
+        margin-bottom: 12px;
+        max-width: 400px;
+      }
+
+      div.button {
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+}

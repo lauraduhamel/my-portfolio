@@ -8,9 +8,9 @@
                  <a href="https://www.behance.net/lauraduhamel"><img src="img/behance-icon.png" alt="behance icon"></a>
             </div>
             <div class="language">
-               <p> <a href="">FR</a></p>
+               <p> <a href="?lang=fr">FR</a></p>
                 <span></span>
-                <p><a href="">EN</a></p>
+                <p><a href="?lang=en">EN</a></p>
             </div>
         </div>
         <p> ©Laura Duhamel - 2022 All reserved rights</p>

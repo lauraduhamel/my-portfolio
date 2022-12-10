@@ -1,7 +1,15 @@
 @import 'libs/reset.scss';
 @import 'global.scss';
+@import 'component.scss';
+@import "section/header.scss";
+@import "section/home.scss";
+@import "section/works.scss";
+@import "section/about.scss";
+@import "section/contact.scss";
+@import "section/footer.scss";
 @import "menu.scss";
 @import "animation.scss";
+
 
 
 
