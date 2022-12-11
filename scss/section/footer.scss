@@ -1,12 +1,19 @@
 footer {
   padding: 64px 0 32px 0;
 
+
+  img {
+    width: 30px;
+  }
+
+
   div.language {
     display: flex;
 
     p a {
       text-transform: uppercase;
     }
+
 
     span::after {
       display: block;

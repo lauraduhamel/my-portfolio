@@ -2,6 +2,8 @@
 
 
 
+
+
 /*
 $(".gif").hover(function(){
     $(this).attr("src", function(index, attr){
@@ -16,8 +18,6 @@ $(".gif").hover(function(){
 
 
 $( document ).ready(function() {
-
-
     //change gif  (img source) when hover
     $("img#gif").hover(function(){
         $(this).attr('src','img/profile-animation-hover-2.gif');
@@ -40,8 +40,6 @@ $( document ).ready(function() {
        }
 
     })
-
-    $("li::selection").$(this).html("je suis lolilol");
 
 
 

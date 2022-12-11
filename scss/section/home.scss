@@ -1,6 +1,6 @@
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
 
@@ -41,4 +41,14 @@ main {
 
   }
 
+}
+
+
+@media all and (max-width: 1024px) {
+
+  main {
+    h1, p {
+    text-align: center;
+    }
+  }
 }

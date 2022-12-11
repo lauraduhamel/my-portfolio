@@ -25,10 +25,15 @@ section.works {
   div.project-container {
     //box-shadow: rgba(15, 15, 238, 0.5) 1px 4px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    position: relative;
-    margin: auto;
+     margin: auto;
     margin-bottom: 48px;
     max-width: 1000px;
+    position: relative;
+
+    &:hover {
+      cursor: url(../img/icon.svg), auto;
+    }
+
 
     img {
       object-fit: cover;
@@ -51,64 +56,6 @@ section.works {
       margin-bottom: -14px;
     }
 
-
-    div.grid-container {
-      display: grid;
-      grid-auto-rows: minmax(0, auto);
-
-
-      .grid-item-1 {
-        grid-area: intro;
-        display: flex;
-        padding: 0 32px;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .grid-item-2 {
-        grid-area: image;
-        display: flex;
-        flex-direction: column;
-
-      }
-      &.left {
-        grid-template-areas: "intro image";
-
-        .grid-item-2 {
-          justify-content: end;
-
-          img {
-            align-self: end
-          }
-        }
-
-      }
-      &.right {
-        grid-template-areas: "image intro";
-
-        .grid-item-1 {
-          text-align: right;
-        }
-
-
-      }
-
-    }
-    &:hover {
-      cursor: url(../img/icon.svg), auto;
-
-      .grid-container .grid-item-1 {
-        visibility: hidden;
-        opacity: 0;
-            }
-
-      .overlay {
-        visibility: visible;
-        opacity: 1;
-        margin: auto;
-        width: 100%;
-      }
-
-    }
     .overlay {
       display: grid;
       align-items: center;
@@ -117,39 +64,33 @@ section.works {
       position: absolute;
       top: 0;
       bottom: 0;
-      transition: all 2s;
-      background: rgba(15, 15, 238, 0.95);
+      transition: all 0.5s;
+      background: rgba(15, 15, 238, 1);
       color: $white;
       grid-template-columns: repeat(4, min-content);
       column-gap: 32px;
       padding: 0 32px;
       width: 0;
-
-      .text {
-        transition: width 0.3s, opacity 1s, visibility 0.01s;
-        transition-delay: 10s;
-      }
+      overflow: hidden;
 
 
       &.left {
         grid-template-areas: "number descriptif line category";
         left: 0;
-        padding-right: 20%;
-
-
-      }
+          }
 
       &.right {
         grid-template-areas: "category line descriptif number";
-        padding-left: 20%;
         text-align: right;
         right: 0;
+        justify-content: end;
 
       }
 
       .grid-item-1 {
         grid-area: number;
       }
+
       .grid-item-2 {
         grid-area: descriptif;
         min-width: 350px;
@@ -173,6 +114,7 @@ section.works {
 
       .grid-item-4 {
         grid-area: category;
+        min-width: 100px;
         display: flex;
         text-transform: lowercase;
         font-family: $title;
@@ -192,6 +134,69 @@ section.works {
     }
 
 
+    div.grid-container {
+      display: grid;
+      grid-auto-rows: minmax(0, auto);
+
+      .grid-item-1 {
+        grid-area: intro;
+        display: flex;
+        padding: 0 32px;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .grid-item-2 {
+        grid-area: image;
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      &.left {
+        grid-template-areas: "intro image";
+
+        .grid-item-2 {
+          justify-content: end;
+
+          img {
+            align-self: end
+          }
+        }
+
+      }
+
+      &.right {
+        grid-template-areas: "image intro";
+
+        .grid-item-1 {
+          text-align: right;
+        }
+
+
+      }
+
+    }
+
+    &:hover {
+
+      .grid-container .grid-item-1 {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .overlay {
+        visibility: visible;
+        opacity: 1;
+        margin: auto;
+        width: 80%;
+
+      }
+
+    }
+
+
+
 
   }
 }
@@ -200,9 +205,10 @@ section.works {
 @media all and (max-width: 1024px) {
 
 
-  section.works {
-    div.line {
-      display:flex;
+  section.works .wrap {
+   > div.line {
+      display: flex;
+      margin-left:auto;
     }
 
     div.flex-container {
@@ -221,46 +227,48 @@ section.works {
         display: none;
       }
 
-       div.grid-container {
+      div.grid-container {
 
-         &.right {
-           .grid-item-1 {
-             justify-content: end;
-             p {
-               order: 2;
-                        }
-           }
-         }
+        &.right {
+          .grid-item-1 {
+            justify-content: end;
 
-         &.left {
-           .grid-item-1 {
-               justify-content: start;
-           }
-         }
+            p {
+              order: 2;
+            }
+          }
+        }
 
-         &.left, &.right {
-           grid-template-areas: "intro"
+        &.left {
+          .grid-item-1 {
+            justify-content: start;
+          }
+        }
+
+        &.left, &.right {
+          grid-template-areas: "intro"
                                 "image";
-        .grid-item-1 {
-          padding:24px;
-          flex-direction: row;
-          align-items: center;
-          gap:32px;
-        }
+
+          .grid-item-1 {
+            padding: 24px;
+            flex-direction: row;
+            align-items: center;
+            gap: 32px;
+          }
 
 
-           .grid-item-2 {
-             justify-content: center;
+          .grid-item-2 {
+            justify-content: center;
 
-             img {
-               align-self: center;
-             }
-           }
+            img {
+              align-self: center;
+            }
+          }
 
         }
 
       }
-      }
+    }
 
     div.project-container {
       padding: 0;

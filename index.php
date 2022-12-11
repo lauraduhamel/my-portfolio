@@ -4,10 +4,11 @@
     <main id="home">
         <div class="wrap">
             <div>
-                <p><?php echo($home->hey); ?></p>
+                <p><?php echo($home->hey);?></p>
                 <h1><?php echo($home->who); ?></h1>
+                
                 <span class="line"></span>
-                <div class="button">
+                <div class="button discover">
                     <a href="#works" class="light"><?php echo($home->button); ?></a>
                 </div>
             </div>
@@ -29,7 +30,7 @@
                 <?php foreach ($projects as $project) {
                     $i++;
                     ?>
-                <div class="project-container">
+                <div class="project-container" >
                 <a href="<?php echo($project->link);?>" target="_blank">
                     <div class="grid-container">
                         <div class="grid-item-1">
@@ -42,7 +43,7 @@
                     </div>
                     <div class="overlay">
                             <div class="grid-item-1">
-                                <p class="number"><?php echo($i) ?></p>
+                                <p class="number"><?php echo($i);?></p>
                             </div>
                             <div class="grid-item-2">
                                 <h3><?php echo($project->name);?></h3>
@@ -58,15 +59,10 @@
                                     <?php } ?>
                                 </ul>
                             </div>
-                        </div>
+                    </div>
                 </a>
                 </div>
                 <?php } ?>
-
-
-
-
-
 
             </div>
 
@@ -93,9 +89,9 @@
                             </ul>
                             <p>&</p>
                             <ul>
-                                <li><?php echo($about->socialmedia); ?> <a href="https://www.behance.net/lauraduhamel">Behance</a>.</li>
-                                <li><?php echo($about->socialmedia); ?> <a href="https://www.linkedin.com/in/lauraduhamel/">Linkedin</a>.</li>
-                                <li><?php echo($about->socialmedia); ?> <a href="">Pinterest</a>.</li>
+                                <li><?php echo($about->socialmedia); ?> <a href="https://www.behance.net/lauraduhamel">Behance</a></li>
+                                <li><?php echo($about->socialmedia); ?> <a href="https://www.linkedin.com/in/lauraduhamel/">Linkedin</a></li>
+                                <li><?php echo($about->socialmedia); ?> <a href="">Pinterest</a></li>
                             </ul>
                         </div>
                     </div>

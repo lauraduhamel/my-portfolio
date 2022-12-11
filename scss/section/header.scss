@@ -1,6 +1,18 @@
 
 header {
 
+  li {
+    img {
+      width: 25px;
+    }
+  }
+
+  .overlay li {
+    img {
+      width: 50px;
+    }
+  }
+
   a.mobile {
     display: flex;
     justify-content: center;

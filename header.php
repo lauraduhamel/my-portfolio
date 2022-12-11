@@ -18,8 +18,10 @@
     <meta property="og:description" content="Nice to meet you, I'm Laura Duhamel, a freelance in graphic designer. You are on my portfolio, let's discover my projects."/>
 
     <title><?php echo($head->title); ?></title> <!---  -->
-    <link rel="icon" type="image/x-icon" href="img/logo.svg">
+    <link rel="icon" type="image/x-icon" href="img/profile-icon.png">
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="js/libs/jquery-3.6.1.js"></script>
     <script src="js/animation.js"></script>
@@ -45,8 +47,8 @@
                     <ul>
                         <li><a href="#works"><?php echo($menu->works); ?></a></li>
                         <li><a href="#contact"><?php echo($menu->contact); ?></a></li>
-                        <li><a href="https://www.linkedin.com/in/lauraduhamel/"><img src="img/linkedin-icon.png" alt="linkedin icon"></a></li>
-                        <li><a href="https://www.behance.net/lauraduhamel"><img src="img/behance-icon.png" alt="behance icon"></a></li>
+                        <li><a href="https://www.linkedin.com/in/lauraduhamel/"><img src="img/linkedin-icon.svg" alt="linkedin icon"></a></li>
+                        <li><a href="https://www.behance.net/lauraduhamel"><img src="img/behance-icon.svg" alt="behance icon"></a></li>
                     </ul>
                 </nav>
             </div>
@@ -66,8 +68,8 @@
                             <ul>
                                 <li><a href="#works"><?php echo($menu->works); ?></a></li>
                                 <li><a href="#contact"><?php echo($menu->contact); ?></a></li>
-                                <li><a href="https://www.linkedin.com/in/lauraduhamel/"><img src="img/linkedin-icon.png" alt="linkedin icon"></a></li>
-                                <li><a href="https://www.behance.net/lauraduhamel"><img src="img/behance-icon.png" alt="behance icon"></a></li>
+                                <li><a href="https://www.linkedin.com/in/lauraduhamel/"><img src="img/linkedin-icon.svg" alt="linkedin icon"></a></li>
+                                <li><a href="https://www.behance.net/lauraduhamel"><img src="img/behance-icon.svg" alt="behance icon"></a></li>
                             </ul>
                              </div>
                         </nav>

@@ -10,13 +10,32 @@ $paragraph : 'Inter';
 
 //Import font
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap&text=↑→↓←↗");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
+@font-face {
+  font-family: 'EDNimpkish-Regular';
+  src: url('./font/ed-nimpkish-regular.eot');
+  src: url('./font/ed-nimpkish-regular.eot?#iefix') format('embedded-opentype'),
+  url('./font/ed-nimpkish-regular.woff2') format('woff2'),
+  url('./font/ed-nimpkish-regular.woff') format('woff'),
+  url('./font/ed-nimpkish-regular.ttf') format('truetype'),
+  url('./font/ed-nimpkish-regular.svg#youworkforthem') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:url('./font/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+
+}
 //Global
 
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
+
 }
 
 body {
@@ -78,13 +97,23 @@ section, main {
 
 }
 
+.link {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
 
 
 
 
 @media all and (max-width: 1024px) {
   .wrap {
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
     padding: 0 72px;
   }
@@ -97,10 +126,31 @@ section, main {
 
   }
 
-
 }
 
 
+
+@media all and (max-width: 767px) {
+
+  .wrap {
+    max-width: 730px;
+    margin: auto;
+    padding: 0 52px;
+  }
+    
+
+
+}
+
+@media all and (max-width: 480px) {
+
+  .wrap {
+    max-width: 460px;
+    margin: auto;
+    padding: 0 32px;
+  }
+  
+}
 
 
 

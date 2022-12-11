@@ -91,7 +91,9 @@
       <workItem from="1669131077577" duration="6941000" />
       <workItem from="1669262300982" duration="50150000" />
       <workItem from="1670521551856" duration="12308000" />
-      <workItem from="1670623065819" duration="8328000" />
+      <workItem from="1670623065819" duration="8742000" />
+      <workItem from="1670693851267" duration="3211000" />
+      <workItem from="1670697202435" duration="12535000" />
     </task>
     <servers />
   </component>
@@ -114,7 +116,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/index.php</url>
-          <line>81</line>
+          <line>77</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
