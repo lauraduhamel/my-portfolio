@@ -4,7 +4,7 @@
 $blue : #0F0FEE;
 $white : #FFFFFF;
 $yellow : yellow;
-$title : 'ED Nimpkish';
+$title : "EDNimpkish-Regular";
 $paragraph : 'Inter';
 
 
@@ -14,13 +14,13 @@ $paragraph : 'Inter';
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 @font-face {
-  font-family: 'EDNimpkish-Regular';
-  src: url('./font/ed-nimpkish-regular.eot');
-  src: url('./font/ed-nimpkish-regular.eot?#iefix') format('embedded-opentype'),
-  url('./font/ed-nimpkish-regular.woff2') format('woff2'),
-  url('./font/ed-nimpkish-regular.woff') format('woff'),
-  url('./font/ed-nimpkish-regular.ttf') format('truetype'),
-  url('./font/ed-nimpkish-regular.svg#youworkforthem') format('svg');
+  font-family: "EDNimpkish-Regular";
+  src: url('../font/ed-nimpkish-regular.eot');
+  src: url('../font/ed-nimpkish-regular.eot?#iefix') format('embedded-opentype'),
+  url('../font/ed-nimpkish-regular.woff2') format('woff2'),
+  url('../font/ed-nimpkish-regular.woff') format('woff'),
+  url('../font/ed-nimpkish-regular.ttf') format('truetype'),
+  url('../font/ed-nimpkish-regular.svg#youworkforthem') format('svg');
   font-weight: normal;
   font-style: normal;
 }

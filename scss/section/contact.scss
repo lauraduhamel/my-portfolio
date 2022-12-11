@@ -99,3 +99,14 @@ section.contact {
     }
   }
 }
+
+
+@media all and (max-width: 767px) {
+
+section.contact {
+  h3 {
+    font-size: 56px;
+  }
+}
+
+}

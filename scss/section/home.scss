@@ -8,6 +8,10 @@ main {
     margin-bottom: 12px;
   }
 
+  p {
+    font-size: 26px;
+  }
+
   h1 {
     font-family: $title;
     font-size: 130px;
@@ -47,8 +51,33 @@ main {
 @media all and (max-width: 1024px) {
 
   main {
-    h1, p {
-    text-align: center;
+
+    h1 {
+      font-size: 100px;
+      line-height: 100px;
     }
   }
+}
+
+@media all and (max-width: 767px) {
+
+
+}
+
+@media all and (max-width: 480px) {
+
+  main {
+    h1 {
+      font-size: 80px;
+      line-height: 90px;
+      text-align: left;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: left;
+    }
+
+  }
+
 }

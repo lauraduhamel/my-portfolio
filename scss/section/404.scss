@@ -1,0 +1,34 @@
+div.error {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: $blue;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+
+  div.line {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    font-family: $title;
+    text-transform: lowercase;
+    font-size: 100px;
+    line-height: 100px;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    &::after {
+      content: "↗";
+      padding-left: 3px;
+    }
+  }
+
+
+}

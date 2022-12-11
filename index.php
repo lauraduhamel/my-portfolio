@@ -6,7 +6,7 @@
             <div>
                 <p><?php echo($home->hey);?></p>
                 <h1><?php echo($home->who); ?></h1>
-                
+
                 <span class="line"></span>
                 <div class="button discover">
                     <a href="#works" class="light"><?php echo($home->button); ?></a>
@@ -124,7 +124,7 @@
                     </div>
                 <div class="grid-item grid-item-4">
                         <img src="img/email-icon.svg" class="icon" alt="icon of an email">
-                        <h3><a href="tel:+33767944074">+ 33 767944074</a></h3>
+                        <h3><a href="tel:+33767944074">+33 767944074</a></h3>
                         <h3><a href="mailto:contact@lauraduhamel.com">contact@lauraduhamel.com</a></h3>
                 </div>
             </div>

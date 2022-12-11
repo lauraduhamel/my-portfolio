@@ -145,3 +145,13 @@ section.about {
 
 
 }
+
+
+
+@media all and (max-width: 480px) {
+
+  section.about div.grid-container .grid-item-3 img {
+    max-width: 275px;
+  }
+
+}

@@ -68,8 +68,8 @@ a {
 
 @font-face {
   font-family: "EDNimpkish-Regular";
-  src: url("./font/ed-nimpkish-regular.eot");
-  src: url("./font/ed-nimpkish-regular.eot?#iefix") format("embedded-opentype"), url("./font/ed-nimpkish-regular.woff2") format("woff2"), url("./font/ed-nimpkish-regular.woff") format("woff"), url("./font/ed-nimpkish-regular.ttf") format("truetype"), url("./font/ed-nimpkish-regular.svg#youworkforthem") format("svg");
+  src: url("../font/ed-nimpkish-regular.eot");
+  src: url("../font/ed-nimpkish-regular.eot?#iefix") format("embedded-opentype"), url("../font/ed-nimpkish-regular.woff2") format("woff2"), url("../font/ed-nimpkish-regular.woff") format("woff"), url("../font/ed-nimpkish-regular.ttf") format("truetype"), url("../font/ed-nimpkish-regular.svg#youworkforthem") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -104,7 +104,7 @@ img.icon {
 }
 
 h2 {
-  font-family: "ED Nimpkish";
+  font-family: "EDNimpkish-Regular";
   font-size: 128px;
   line-height: 128px;
   text-transform: lowercase;
@@ -213,6 +213,35 @@ span.line.dark {
   border-left: 2px solid #0F0FEE;
 }
 
+div.error {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #0F0FEE;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+}
+div.error div.line {
+  display: flex;
+  justify-content: center;
+}
+div.error h1 {
+  font-family: "EDNimpkish-Regular";
+  text-transform: lowercase;
+  font-size: 100px;
+  line-height: 100px;
+}
+div.error h1 span {
+  text-transform: uppercase;
+}
+div.error a {
+  text-decoration: underline;
+}
+div.error a::after {
+  content: "↗";
+  padding-left: 3px;
+}
+
 header li img {
   width: 25px;
 }
@@ -301,8 +330,11 @@ main {
 main p, main h1 {
   margin-bottom: 12px;
 }
+main p {
+  font-size: 26px;
+}
 main h1 {
-  font-family: "ED Nimpkish";
+  font-family: "EDNimpkish-Regular";
   font-size: 130px;
   line-height: 140px;
   text-transform: lowercase;
@@ -325,8 +357,20 @@ main .wrap > div div.button {
 }
 
 @media all and (max-width: 1024px) {
-  main h1, main p {
-    text-align: center;
+  main h1 {
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+@media all and (max-width: 480px) {
+  main h1 {
+    font-size: 80px;
+    line-height: 90px;
+    text-align: left;
+  }
+  main p {
+    font-size: 20px;
+    text-align: left;
   }
 }
 section.works .wrap > div.line {
@@ -360,13 +404,13 @@ section.works div.project-container img {
   height: 300px;
 }
 section.works div.project-container h3 {
-  font-family: "ED Nimpkish";
+  font-family: "EDNimpkish-Regular";
   font-size: 20px;
   line-height: 27px;
   text-transform: lowercase;
 }
 section.works div.project-container p.number {
-  font-family: "ED Nimpkish";
+  font-family: "EDNimpkish-Regular";
   font-size: 155px;
   line-height: 155px;
   margin-bottom: -14px;
@@ -421,7 +465,7 @@ section.works div.project-container .overlay .grid-item-4 {
   min-width: 100px;
   display: flex;
   text-transform: lowercase;
-  font-family: "ED Nimpkish";
+  font-family: "EDNimpkish-Regular";
   font-size: 13px;
   line-height: 18px;
   margin: 16px auto;
@@ -610,9 +654,14 @@ section.about div.grid-container .grid-item-4 p {
     max-width: 350px;
   }
 }
+@media all and (max-width: 480px) {
+  section.about div.grid-container .grid-item-3 img {
+    max-width: 275px;
+  }
+}
 section.contact h3 {
   text-align: left;
-  font-family: "ED Nimpkish";
+  font-family: "EDNimpkish-Regular";
   font-size: 64px;
   line-height: 70px;
 }
@@ -665,6 +714,11 @@ section.contact div.grid-container .grid-item-4 img {
   }
   section.contact div.grid-container p {
     margin: 0 auto 32px auto;
+  }
+}
+@media all and (max-width: 767px) {
+  section.contact h3 {
+    font-size: 56px;
   }
 }
 footer {
