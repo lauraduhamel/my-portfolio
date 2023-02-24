@@ -8,21 +8,10 @@
 
 session_start();
 
-if(!isset($_SESSION['lang']))
-    $_SESSION['lang'] = "en";
-else if (isset($_GET['lang']) && !empty($_GET['lang'])) {
-    if ($_GET['lang'] == "en")
-        $_SESSION['lang'] = "en";
-    else if ($_GET['lang'] == "fr")
-        $_SESSION['lang'] = "fr";
-}
-
-
-if ($_SESSION['lang']=="fr") {
-    $filename = './data/data-fr.json';
-}
-else {
-    $filename='./data/data-en.json';
+if (strpos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'fr') === 0) {
+    $filename = './data/data-fr.json'; // utiliser le fichier de données français
+} else {
+    $filename = './data/data-en.json'; // utiliser le fichier de données anglais
 }
 
 

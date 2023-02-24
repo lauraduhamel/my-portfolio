@@ -3,7 +3,9 @@
 
   "head":
   {
-    "title": "Laura Duhamel's Portfolio"
+    "title": "Laura Duhamel's Portfolio",
+    "description": "Nice to meet you, I am Laura Duhamel, a freelance graphic designer and illustrator. Please don't hesitate to contact me to bring your projects to life. You can also discover my portfolio created with joy and passion!",
+
   },
 
   "menu":
@@ -16,13 +18,13 @@
     {
       "hey": "Nice to meet you, I'm",
       "who": "L<span>a</span>ura Duhamel",
-      "button": "discover my portfolio"
+      "button": "Discover my portfolio"
     },
 
   "work":
     {
       "title": "Wo<span>r</span>ks",
-      "description": "Over here, is my work as a graphic and an illustrator, have a pleasant visit!",
+      "description": "This is my work as a graphic and an illustrator, click on the section to access to the behance project, have a pleasant visit!",
       "button": "See more on my behance"
     },
 
@@ -30,31 +32,39 @@
    {
     "name" : "Louise, art en entreprises",
      "link": "https://www.behance.net/gallery/152688227/Louise-art-en-entreprise",
-    "description" : "Lorempsum bmablabla",
-    "image": {"url":"louise.png", "alt": "banner of louise"},
-    "categories": ["Branding"]
+    "description" : "Louise creates bridges between artists, companies and their employees. The company encourages merging artists by offering them the opportunity to present their work in various corporate spaces. This initiative aims to compensate for the lack of visual art venues.",
+    "image": {"url":"louise.jpg", "alt": "louise's banner"},
+    "categories": ["Visual identity", "Web design", "Brochure"]
   },
   {
     "name" : "Main St",
     "link": "https://www.behance.net/gallery/152688227/Louise-art-en-entreprise",
-    "description" : "Lorempsum bmablabla",
-    "image": {"url":"main-st.png", "alt": "banner of Main St"},
-    "categories": ["Branding", "Web design", "Brochure"]
+    "description" : "Main St. is a game board café located near New York City. The café is a cozy meeting place which offers more than 300 games, events every week, and also kids' clubs. Far from the idea that boards games are only for children, Main St. attracts fans and novices, young and old, friends and families. To finish, Main St offers multiple snacks, desserts, and drinks to allow you to enjoy the moment in the best way.",
+    "image": {"url":"main-st.jpg", "alt": "Main Steet's banner"},
+    "categories": ["Visual identity", "Web design", "Brochure"]
   },
+    {
+      "name" : "Ces âmes",
+      "link" : "https://www.behance.net/gallery/152853631/Ces-ames",
+      "description" : "Ces âmes, \"These souls\" in English, offers personal development courses for employees, students, and individuals. The company was born from the idea that we all have a unique contribution to make to the world, but we need the tools to best achieve it. The training offers a space to get to know oneself and become aware of one's potential to develop.",
+      "image": {"url":"ces-ames.jpg", "alt": "Ces âmes' banner"},
+      "categories": ["Web design", "Branding"]
+    },
+    {
+      "name" : "Groove typeface",
+      "link" : "https://www.behance.net/gallery/152853631/Ces-ames",
+      "description" : "Lorempsum bmablabla",
+      "image": {"url":"groove-typeface.jpg", "alt": "Groove Typeface's banner"},
+      "categories": ["Web design", "Branding"]
+    },
   {
-    "name" : "Feu de dragon",
+    "name" : "Un manchot sur la dune",
     "link": "https://www.behance.net/gallery/152889569/Feu-de-Dragon",
-    "description" : "Lorempsum bmablabla",
-    "image": {"url":"feu-de-dragon.png", "alt": "banner of Feu de dragon"},
-    "categories": ["Illustration"]
-  },
-  {
-    "name" : "Ces âmes",
-    "link" : "https://www.behance.net/gallery/152853631/Ces-ames",
-    "description" : "Lorempsum bmablabla",
-    "image": {"url":"ces-ames.png", "alt": "banner of Ces âmes"},
-    "categories": ["Web design", "Branding"]
+    "description" : " 'Un manchot sur la dune', translated by 'A Penguin on the dune' in English, is a children's book born from a collaboration between Catherine Lapierre-Ouellet, the author of the book, and myself, Laura Duhamel, the illustrator. The story tells of a little penguin who waits for his mother during a day that seems to last an eternity.",
+    "image": {"url":"un-manchot-sur-la-dune.jpg", "alt": "Book cover"},
+    "categories": ["Chidren's book", "Illustration"]
   }
+
 ],
   "about" :
     {
@@ -62,16 +72,16 @@
       "subtitle": "I'm Laura Duhamel, alias Lau.",
       "list": ["I'm french", "I'm 20 years old", "I'm graphic designer", "I'm an illustrator"],
       "socialmedia" : "I'm on",
-      "description" : "To expend, I’m a passionate, a motivated, a little crazy, a little boring, a little annoying, but I’m myself and I’m trying to do my best everytime. I think that perfection doesn’t exist and design help me in my life, everyday, every times",
-      "button" : {"content": "My resume over here", "url": "venglish"}
+      "description" : "I am a student and graphic designer, but also a passionate, motivated, and persistent individual. Whether it's in France or across the Atlantic, I approach the world by experiencing it. Fascinated by visual communication and its power to convey emotions, I aspire to deepen my knowledge of this discipline and make it my profession. As I seek to give meaning to my life and actions, my ultimate goal is to contribute to social justice through graphic design, in an environmentally and ethically conscious approach.",
+      "button" : {"content": "My resume over here", "url": "laura_duhamel_cv_en"}
     },
   "contact" :
     {
       "title":"Get in touch",
-      "description": "You need my services to create a flyer, a brochure, a brand identity, an illustration, a web design, for a small or bigger project ? You just need some informations ? Contact me, I would be happy to talk & work with you!",
+      "description": "You need my services to create a brand identity a,flyer, a brochure, an illustration, a web design or something else? You just need some informations? Contact me, I would be happy to talk & work with you!",
       "button": "contact me"
     },
   "footer" : {
-      "copyright": "©Laura Duhamel - 2022 All reserved rights"
+      "copyright": "Design+integration ©Laura Duhamel - 2023 All reserved rights"
   }
 }

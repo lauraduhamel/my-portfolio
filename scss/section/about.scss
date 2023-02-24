@@ -2,7 +2,7 @@ section.about {
 
 
   img {
-    max-width: 500px;
+    max-width: 400px;
   }
 
   div.button {
@@ -44,14 +44,6 @@ section.about {
 
           }
 
-          &::after {
-            content: '↗';
-            padding-left: 3px;
-            text-decoration: none;
-
-
-          }
-
 
         }
 
@@ -70,6 +62,7 @@ section.about {
 
     .grid-item-3 {
       grid-area: profile;
+      justify-content: center;
       display: flex;
     }
 

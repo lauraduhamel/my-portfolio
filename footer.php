@@ -3,17 +3,18 @@
 <footer>
     <div class="wrap">
         <div class="container">
-            <div>
-                <a href="https://www.linkedin.com/in/lauraduhamel/"><img src="img/linkedin-icon.svg" alt="linkedin icon"></a>
-                 <a href="https://www.behance.net/lauraduhamel"><img src="img/behance-icon.svg" alt="behance icon"></a>
-            </div>
-            <div class="language link">
-               <p> <a href="?lang=fr">FR</a></p>
+            <div class="language link" data-aos="fade-right">
+                <p> <a href="?lang=fr">FR</a></p>
                 <span></span>
                 <p><a href="?lang=en">EN</a></p>
             </div>
-        </div>
-        <p> ©Laura Duhamel - 2022 All reserved rights</p>
+            <div class="socials"  data-aos="fade-right">
+                <li class="social"><a href="https://www.linkedin.com/in/lauraduhamel/">LinkedIn</a></li>
+                <li class="social"><a href="https://www.behance.net/lauraduhamel">Behance</a></li>
+                <li class="social"><a href="mailto:contact@lauraduhamel.com">contact@lauraduhamel.com</a></li>
+            </div>
+               </div>
+        <p class="copyright"> <?php echo($footer->copyright); ?></p>
     </div>
 </footer>
 

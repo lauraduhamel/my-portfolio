@@ -36,9 +36,15 @@ $paragraph : 'Inter';
   scroll-behavior: smooth;
   box-sizing: border-box;
 
+
+}
+
+li {
+  list-style: none;
 }
 
 body {
+  overflow-x: hidden;
   font-family: $paragraph;
   color: $white;
   background: $blue;
@@ -48,13 +54,13 @@ body {
 
 a {
   color:$white;
- text-transform: lowercase;
+
 }
 
 
 .about, .contact, .works {
   p {
-    max-width: 350px;
+    max-width: 360px;
   }
 }
 
@@ -97,7 +103,7 @@ section, main {
 
 }
 
-.link {
+.link, .social {
   a {
     &:hover {
       text-decoration: underline;
@@ -106,9 +112,24 @@ section, main {
 }
 
 
+.social {
+
+  &:after {
+    content: "↗";
+    margin-left: 5px;
+  }
+
+}
 
 
 
+
+@media all and (max-width: 1350px) {
+  h2 {
+    font-size: 112px;
+    line-height: 112px;
+  }
+}
 
 
 @media all and (max-width: 1024px) {
@@ -119,11 +140,13 @@ section, main {
   }
 
   h2 {
-    font-size: 112px;
-    line-height: 112px;
     margin: auto;
     text-align: center;
 
+  }
+
+  section, main {
+    padding: 72px 0;
   }
 
 }
@@ -132,12 +155,24 @@ section, main {
 
 @media all and (max-width: 767px) {
 
+  .about p, .contact p, .works p {
+    margin: auto;
+    max-width: 275px;
+  }
+
   .wrap {
     max-width: 730px;
     margin: auto;
     padding: 0 52px;
   }
-    
+
+  section, main {
+    padding: 80px 0;
+  }
+
+  p {
+
+  }
 
 
 }
@@ -145,12 +180,20 @@ section, main {
 @media all and (max-width: 480px) {
 
   .wrap {
-    max-width: 460px;
+    max-width: 400px;
     margin: auto;
     padding: 0 32px;
   }
+
+  h2 {
+    font-size: 72px;
+    line-height: 82px;
+  }
+
+
   
 }
+
 
 
 

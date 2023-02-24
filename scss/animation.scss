@@ -19,3 +19,27 @@
 }
 
 
+
+//ANIMATION AU SCROLL
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.aleft {
+  transform: translateX(-1500px);
+}
+
+.aright {
+  transform: translateX(1500px);
+}
+
+.atop {
+  transform: translateY(-1500px);
+}
+
+.abottom {
+  transform: translateY(1500px);
+}
+

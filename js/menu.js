@@ -26,6 +26,13 @@ $( document ).ready(function() {
 
 });
 
+$(document).ready(function() {
+    $(window).resize(function() {
+        if ($(window).width() > 1024) {
+            $('body').css('overflow-y', 'auto');
+        }
+    });
+});
 
 
 //transition

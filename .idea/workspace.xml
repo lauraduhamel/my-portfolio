@@ -14,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -53,11 +53,11 @@
       <recent name="C:\xampp\htdocs\www\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\lauraduhamel\js" />
       <recent name="C:\xampp\htdocs\www\scss\section" />
       <recent name="C:\xampp\htdocs\www\scss" />
       <recent name="C:\xampp\htdocs\www\js" />
       <recent name="C:\xampp\htdocs" />
-      <recent name="C:\xampp\htdocs\" />
     </key>
   </component>
   <component name="RunManager">
@@ -93,7 +93,12 @@
       <workItem from="1670521551856" duration="12308000" />
       <workItem from="1670623065819" duration="8742000" />
       <workItem from="1670693851267" duration="3211000" />
-      <workItem from="1670697202435" duration="17395000" />
+      <workItem from="1670697202435" duration="18362000" />
+      <workItem from="1670805637964" duration="1293000" />
+      <workItem from="1671307900623" duration="465000" />
+      <workItem from="1671308420892" duration="1269000" />
+      <workItem from="1677030298526" duration="14328000" />
+      <workItem from="1677163947595" duration="9055000" />
     </task>
     <servers />
   </component>
@@ -110,16 +115,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/index.php</url>
-          <line>77</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
