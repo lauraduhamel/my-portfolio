@@ -75,7 +75,7 @@ a {
 }
 @font-face {
   font-family: "Inter";
-  src: url("./font/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf") format("truetype");
 }
 * {
   scroll-behavior: smooth;

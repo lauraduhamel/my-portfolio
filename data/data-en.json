@@ -4,14 +4,14 @@
   "head":
   {
     "title": "Laura Duhamel's Portfolio",
-    "description": "Nice to meet you, I am Laura Duhamel, a freelance graphic designer and illustrator. Please don't hesitate to contact me to bring your projects to life. You can also discover my portfolio created with joy and passion!",
+    "description": "Nice to meet you, I am Laura Duhamel, a freelance graphic designer and illustrator. Please don't hesitate to contact me to bring your projects to life. You can also discover my portfolio created with joy and passion!"
 
   },
 
   "menu":
     {
-      "works": "works",
-      "contact": "contact"
+      "works": "Works",
+      "contact": "Contact"
     },
 
   "home":
@@ -79,7 +79,7 @@
     {
       "title":"Get in touch",
       "description": "You need my services to create a brand identity a,flyer, a brochure, an illustration, a web design or something else? You just need some informations? Contact me, I would be happy to talk & work with you!",
-      "button": "contact me"
+      "button": "Contact me"
     },
   "footer" : {
       "copyright": "Design+integration ©Laura Duhamel - 2023 All reserved rights"

@@ -14,6 +14,10 @@ if (strpos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'fr') === 0) {
     $filename = './data/data-en.json'; // utiliser le fichier de données anglais
 }
 
+if (!file_exists($filename)) {
+    $filename = './data/data-fr.json';
+}
+
 
 //JSON DATA
 
