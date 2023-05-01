@@ -1,4 +1,11 @@
+//RESET
 @import 'libs/reset.scss';
+
+// LIBS
+@import "libs/aos.scss";
+@import "libs/swiper-bundle.min.scss";
+
+//CONTENT
 @import 'global.scss';
 @import 'component.scss';
 @import "section/404.scss";
@@ -11,6 +18,8 @@
 @import "menu.scss";
 @import "animation.scss";
 @import "carousel.scss";
+
+
 
 
 

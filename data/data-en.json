@@ -1,5 +1,10 @@
 
 {
+  "error": {
+    "title" : "Error 404",
+    "description" : "Oups, something wrong happened click",
+    "link": "here to come back to my website"
+  },
 
   "head":
   {
@@ -38,7 +43,7 @@
   },
   {
     "name" : "Main St",
-    "link": "https://www.behance.net/gallery/152688227/Louise-art-en-entreprise",
+    "link": "https://www.behance.net/gallery/153818741/Main-St",
     "description" : "Main St. is a game board café located near New York City. The café is a cozy meeting place which offers more than 300 games, events every week, and also kids' clubs. Far from the idea that boards games are only for children, Main St. attracts fans and novices, young and old, friends and families. To finish, Main St offers multiple snacks, desserts, and drinks to allow you to enjoy the moment in the best way.",
     "image": {"url":"main-st.jpg", "alt": "Main Steet's banner"},
     "categories": ["Visual identity", "Web design", "Brochure"]
@@ -53,14 +58,14 @@
     {
       "name" : "Groove typeface",
       "link" : "https://www.behance.net/gallery/152853631/Ces-ames",
-      "description" : "Lorempsum bmablabla",
+      "description" : "Groove is a sans-serif font inspired by music. Its original name comes from the expression \"In the groove,\" which means \"in rhythm,\" originating from jazz and improvisation. This font reflects the emotions felt through music, its rhythm, vibrations, and energy",
       "image": {"url":"groove-typeface.jpg", "alt": "Groove Typeface's banner"},
       "categories": ["Web design", "Branding"]
     },
   {
     "name" : "Un manchot sur la dune",
-    "link": "https://www.behance.net/gallery/152889569/Feu-de-Dragon",
-    "description" : " 'Un manchot sur la dune', translated by 'A Penguin on the dune' in English, is a children's book born from a collaboration between Catherine Lapierre-Ouellet, the author of the book, and myself, Laura Duhamel, the illustrator. The story tells of a little penguin who waits for his mother during a day that seems to last an eternity.",
+    "link": "https://www.behance.net/gallery/163615149/Un-manchot-sur-la-dune",
+    "description" : " \"Un manchot sur la dune\", translated by 'A Penguin on the dune' in English, is a children's book born from a collaboration between Catherine Lapierre-Ouellet, the author of the book, and myself, Laura Duhamel, the illustrator. The story tells of a little penguin who waits for his mother during a day that seems to last an eternity.",
     "image": {"url":"un-manchot-sur-la-dune.jpg", "alt": "Book cover"},
     "categories": ["Chidren's book", "Illustration"]
   }
@@ -70,7 +75,7 @@
     {
       "title": "A<span>b</span>out me",
       "subtitle": "I'm Laura Duhamel, alias Lau.",
-      "list": ["I'm french", "I'm 20 years old", "I'm graphic designer", "I'm an illustrator"],
+      "list": ["I'm french", "I'm 20 years old", "I'm a graphic designer", "I'm an illustrator"],
       "socialmedia" : "I'm on",
       "description" : "I am a student and graphic designer, but also a passionate, motivated, and persistent individual. Whether it's in France or across the Atlantic, I approach the world by experiencing it. Fascinated by visual communication and its power to convey emotions, I aspire to deepen my knowledge of this discipline and make it my profession. As I seek to give meaning to my life and actions, my ultimate goal is to contribute to social justice through graphic design, in an environmentally and ethically conscious approach.",
       "button" : {"content": "My resume over here", "url": "laura_duhamel_cv_en"}
@@ -78,7 +83,7 @@
   "contact" :
     {
       "title":"Get in touch",
-      "description": "You need my services to create a brand identity a,flyer, a brochure, an illustration, a web design or something else? You just need some informations? Contact me, I would be happy to talk & work with you!",
+      "description": "You need my services to create a brand identity a flyer, a brochure, an illustration, a web design or something else? You just need some informations? Contact me, I would be happy to talk & work with you!",
       "button": "Contact me"
     },
   "footer" : {

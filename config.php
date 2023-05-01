@@ -35,6 +35,7 @@ function console_log($output, $with_script_tags = true)
 }
 
 console_log($users);
+$error = $users->error;
 $head = $users->head;
 $home = $users->home;
 $work = $users->work;

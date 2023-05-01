@@ -1,5 +1,11 @@
 
 {
+  "error": {
+    "title" : "Erreur 404",
+    "description" : "Oups, une erreur est arrivée retournez sur mon portfolio en cliquant ",
+    "link": "juste là"
+  },
+
   "head":
   {
     "title": "Portfolio de Laura Duhamel",
@@ -16,7 +22,7 @@
     {
       "hey": "Enchantée, moi c'est",
       "who": "L<span>a</span>ura Duhamel",
-      "button": "découvrir mon portfolio"
+      "button": "Découvrir mon portfolio"
     },
 
   "work":
@@ -38,7 +44,7 @@
 
   {
     "name" : "Main St",
-    "link": "https://www.behance.net/gallery/152688227/Louise-art-en-entreprise",
+    "link": "https://www.behance.net/gallery/153818741/Main-St",
     "description" : "Main St. est un bar à jeux de société situé près de New York. Le café est un lieu de rencontre cozy qui propose plus de 300 jeux, des évènements chaque semaine pour les adultes, mais également des clubs pour les plus petits. Loin de l'idée que les jeux de sociétés sont réservés aux enfants, Main St. attire passionnés et amateurs, jeunes et moins jeunes, amis et familles.",
     "image": {"url":"main-st.jpg", "alt": "bannière du projet Main St"},
     "categories": ["Identité visuelle", "Web design", "Brochure", "Supports imprimés"]
@@ -55,7 +61,7 @@
     {
       "name" : "Groove Typeface",
       "link" : "https://www.behance.net/gallery/162870925/Groove-Typeface",
-      "description" : "Groove est une police d'écriture sans serif inspirée de la musique. Son nom original provient de l’expression « In the groove », qui signifie « dans le rythme » tirant son origine du jazz et de l’improvisation. Cette police d’écriture reflète les émotions ressenties à travers la musique, son rythme, ses vibrations et son énergie. ",
+      "description" : "Groove est une police d'écriture sans serif inspirée de la musique. Son nom original provient de l’expression « In the groove », qui signifie « dans le rythme » tirant son origine du jazz et de l’improvisation. Cette police d’écriture reflète les émotions ressenties à travers la musique, son rythme, ses vibrations et son énergie.",
       "image": {"url":"groove-typeface.jpg", "alt": "bannière du projet Groove Typeface"},
       "categories": ["Police de caractère", "Affiches"]
     },

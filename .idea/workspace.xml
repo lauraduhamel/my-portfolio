@@ -36,7 +36,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/www/data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/test-laura&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
@@ -53,11 +53,11 @@
       <recent name="C:\xampp\htdocs\www\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\lauraduhamel\js\libs" />
       <recent name="C:\xampp\htdocs\lauraduhamel\js" />
       <recent name="C:\xampp\htdocs\www\scss\section" />
       <recent name="C:\xampp\htdocs\www\scss" />
       <recent name="C:\xampp\htdocs\www\js" />
-      <recent name="C:\xampp\htdocs" />
     </key>
   </component>
   <component name="RunManager">
@@ -98,7 +98,10 @@
       <workItem from="1671307900623" duration="465000" />
       <workItem from="1671308420892" duration="1269000" />
       <workItem from="1677030298526" duration="14328000" />
-      <workItem from="1677163947595" duration="11717000" />
+      <workItem from="1677163947595" duration="14485000" />
+      <workItem from="1677254439275" duration="264000" />
+      <workItem from="1677443008142" duration="13781000" />
+      <workItem from="1677535151448" duration="5427000" />
     </task>
     <servers />
   </component>
@@ -115,5 +118,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/index.php</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

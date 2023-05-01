@@ -10,9 +10,6 @@ $paragraph : 'Inter';
 
 //Import font
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap&text=↑→↓←↗");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-
 @font-face {
   font-family: "EDNimpkish-Regular";
   src: url('../font/ed-nimpkish-regular.eot');
@@ -27,8 +24,9 @@ $paragraph : 'Inter';
 
 @font-face {
   font-family: 'Inter';
-  src:url('../font/Inter-VariableFont_slnt,wght.ttf') format('truetype');
-
+  src: url('../font/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 //Global
 
@@ -87,6 +85,7 @@ section, main {
   &.works, &.contact {
     color: $blue;
     background: $white;
+    overflow-x: hidden;
 
     a {
       color: $blue;
@@ -97,7 +96,7 @@ section, main {
 }
 
 .wrap {
-  max-width: 1400px;
+  max-width: 1900px;
   margin: auto;
   padding: 0 112px;
 
@@ -122,7 +121,13 @@ section, main {
 }
 
 
-
+@media all and (max-width: 1500px) {
+  .wrap {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 72px;
+  }
+}
 
 @media all and (max-width: 1350px) {
   h2 {
@@ -136,7 +141,7 @@ section, main {
   .wrap {
     max-width: 950px;
     margin: auto;
-    padding: 0 72px;
+    padding: 0 64px;
   }
 
   h2 {

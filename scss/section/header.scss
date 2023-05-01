@@ -51,7 +51,6 @@ header {
 
   .header-mobile {
     display: none;
-    padding: 16px 0;
     width: 100vw;
     position: fixed;
     background: rgb(15, 15, 238, 0.90);
@@ -60,6 +59,7 @@ header {
     .container {
 
       .menu-mobile {
+        padding: 16px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;

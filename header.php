@@ -13,8 +13,8 @@
                     <ul class="link">
                         <li><a href="#works"><?php echo($menu->works); ?></a></li>
                         <li><a href="#contact"><?php echo($menu->contact); ?></a></li>
-                        <li class="social"><a href="https://www.linkedin.com/in/lauraduhamel/">LinkedIn</a></li>
-                        <li class="social"><a href="https://www.behance.net/lauraduhamel">Behance</a></li>
+                        <li class="social"><a href="https://www.linkedin.com/in/lauraduhamel/" target="_blank">LinkedIn</a></li>
+                        <li class="social"><a href="https://www.behance.net/lauraduhamel" target="_blank">Behance</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,8 +42,8 @@
                                     <ul>
                                         <li class="menu"><a href="#works"><?php echo($menu->works); ?></a></li>
                                         <li class="menu"><a href="#contact"><?php echo($menu->contact); ?></a></li>
-                                        <li class="social"><a href="https://www.linkedin.com/in/lauraduhamel/">LinkedIn</a></li>
-                                        <li class="social"><a href="https://www.behance.net/lauraduhamel">Behance</a></li>
+                                        <li class="social"><a href="https://www.linkedin.com/in/lauraduhamel/" target="_blank">LinkedIn</a></li>
+                                        <li class="social"><a href="https://www.behance.net/lauraduhamel" target="_blank">Behance</a></li>
                                     </ul>
                                 </nav>
                             </div>

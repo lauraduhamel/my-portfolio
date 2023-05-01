@@ -4,13 +4,13 @@
     <main id="home">
         <div class="wrap">
             <div>
-                <p data-aos="fade-top"><?php echo($home->hey);?></p>
-                <h1 data-aos="fade-right"  data-aos-duration="1000" data-aos-delay="300"><?php echo($home->who); ?></h1>
+                <p data-aos="fade-right"><?php echo($home->hey);?></p>
+                <h1 data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300"><?php echo($home->who); ?></h1>
                 <div id="container">
                     <div id="text"></div>
                     <div id="cursor"></div>
                 </div>
-                <span data-aos="fade-top" data-aos-duration="1000" class="line"></span>
+                <span class="line"></span>
                 <div class="button discover">
                     <a href="#works" class="light"><?php echo($home->button); ?></a>
                 </div>
@@ -22,55 +22,62 @@
         <div class="wrap">
              <div class="flex-container">
                  <div class="text">
-                    <h2 data-aos="fade-right" ><?php echo($work->title); ?></h2>
-                    <p data-aos="fade-right" ><?php echo($work->description); ?></p>
+                    <h2 data-aos="fade-right"><?php echo($work->title); ?></h2>
+                    <p data-aos="fade-right"><?php echo($work->description); ?></p>
                  </div>
-                 <img data-aos="fade-left" src="img/works-icon.svg" class="icon" alt="icon of a picture">
+                 <img src="img/works-icon.svg " data-aos="fade-left" class="icon" alt="icon of a picture">
             </div>
             <div class="line" data-aos="fade-bottom"><span class="line dark"></span></div>
-            <div class="projects">
-
-                <?php foreach ($projects as $project) {
-                    $i++;
-                    ?>
-                <div class="project-container" >
-                <a href="<?php echo($project->link);?>" target="_blank">
-                    <div class="grid-container">
-                        <div class="grid-item-1">
-                            <p class="number"><?php echo($i) ?></p>
-                            <h3><?php echo($project->name);?></h3>
+        </div>
+        <div class="global-container">
+                 <div class="project-container">
+                         <div class="projects">
+                        <?php foreach ($projects as $project) {
+                            $i++;
+                            ?>
+                        <div class="project-item" >
+                        <a href="<?php echo($project->link);?>" target="_blank">
+                            <div class="grid-container">
+                                <div class="grid-item-1">
+                                    <p class="number"><?php echo($i) ?></p>
+                                    <h3><?php echo($project->name);?></h3>
+                                </div>
+                                <div class="grid-item-2">
+                                    <img src="img/<?php echo($project->image->url);?>" alt="<?php echo($project->image->alt);?>">
+                                </div>
+                            </div>
+                            <div class="overlay">
+                                    <div class="grid-item-1">
+                                        <p class="number"><?php echo($i);?></p>
+                                    </div>
+                                    <div class="grid-item-2">
+                                        <h3><?php echo($project->name);?></h3>
+                                        <p><?php echo($project->description);?></p>
+                                    </div>
+                                    <div class="grid-item-3">
+                                        <span class="line light"></span>
+                                    </div>
+                                    <div class="grid-item-4">
+                                        <ul>
+                                           <?php foreach ($project->categories as $category) { ?>
+                                            <li><?php echo($category);?></li>
+                                            <?php } ?>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </a>
                         </div>
-                        <div class="grid-item-2">
-                            <img src="img/<?php echo($project->image->url);?>" alt="<?php echo($project->image->alt);?>">
-                        </div>
+                        <?php } ?>
                     </div>
-                    <div class="overlay">
-                            <div class="grid-item-1">
-                                <p class="number"><?php echo($i);?></p>
-                            </div>
-                            <div class="grid-item-2">
-                                <h3><?php echo($project->name);?></h3>
-                                <p><?php echo($project->description);?></p>
-                            </div>
-                            <div class="grid-item-3">
-                                <span class="line light"></span>
-                            </div>
-                            <div class="grid-item-4">
-                                <ul>
-                                   <?php foreach ($project->categories as $category) { ?>
-                                    <li><?php echo($category);?></li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                    </div>
-                </a>
+                  <div class="container-buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
                 </div>
-                <?php } ?>
-
-            </div>
-
-            <div class="flex-container" data-aos="fade-top"><span class="line dark"></span></div>
-            <div class="button" data-aos="fade-top"><a href="https://www.behance.net/lauraduhamel" class="dark"><?php echo($work->button); ?></a></div>
+                 </div>
+        </div>
+            <div class="flex-container"  data-aos="fade-top"><span class="line dark"></span></div>
+            <div class="button"  data-aos="fade-top"><a href="https://www.behance.net/lauraduhamel" target="_blank" class="dark"><?php echo($work->button); ?></a></div>
         </div>
     </section>
 
@@ -99,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item-3" data-aos="fade-bottom">
+                <div class="grid-item-3"  data-aos="fade-bottom">
                     <img id="gif" src="img/animate.gif" alt="Animation of an illustration of myself">
                 </div>
                 <div class="grid-item-4" >
@@ -115,15 +122,15 @@
     <section class="contact" id="contact">
         <div class="wrap">
             <div class="grid-container">
-                    <div  class="grid-item-1"  data-aos="fade-right">
+                    <div  class="grid-item-1" data-aos="fade-right">
                         <h2><?php echo($contact->title); ?></h2>
                     </div>
-                <div class="grid-item-2"  data-aos="fade-right">
+                <div class="grid-item-2" data-aos="fade-right">
                         <p><?php echo($contact->description); ?></p>
                     </div>
-                    <div class="grid-item-3">
-                        <span class="line dark"  data-aos="fade-top"></span>
-                        <div class="button"  data-aos="fade-top"><a href="mailto:contact@lauraduhamel.com" class="dark"><?php echo($contact->button); ?></a></div>
+                    <div class="grid-item-3" data-aos="fade-top">
+                        <span class="line dark"></span>
+                        <div class="button"><a href="mailto:contact@lauraduhamel.com" class="dark"><?php echo($contact->button); ?></a></div>
                     </div>
                 <div class="grid-item grid-item-4" data-aos="fade-left">
                         <img src="img/email-icon.svg" class="icon" alt="icon of an email">
