@@ -18,10 +18,6 @@ $(".gif").hover(function(){
 
 
 $( document ).ready(function() {
-
-    //animation in scroll
-    AOS.init();
-
     //change gif  (img source) when hover
     $("img#gif").hover(function(){
         $(this).attr('src','img/animate-tongue.gif');
@@ -29,34 +25,25 @@ $( document ).ready(function() {
         $(this).attr('src','img/animate.gif');
     });
 
+    //add class left or right one out of two
+    let i = 0;
+    $("div.project-container").each(function () {
+        i++;
+        if (i % 2 ==0) {
+            $(this).addClass("right");
+            $(this).find(".grid-container, .overlay").addClass("right") .attr('data-aos', 'fade-right').attr('data-aos-duration', '1000');
+        }
+
+        else {
+            $(this).addClass("left");
+            $(this).find(".grid-container, .overlay").addClass("left") .attr('data-aos', 'fade-left').attr('data-aos-duration', '1000');
 
 
-    function updateClasses() {
-        let i = 0;
-        $("div.project-item").each(function () {
-            if ($(window).width() < 1024) {
-                $(this).removeClass("right").addClass("left");
-                $(this).find(".grid-container, .overlay").removeClass("right").addClass("left")//.removeAttr('data-aos', 'fade-right').removeAttr('data-aos', 'fade-right').removeAttr('data-aos-duration', '1000');
-            } else {
-                i++;
-                if (i % 2 == 0) {
-                    $(this).addClass("right").removeClass("left");
-                    $(this).find(".grid-container, .overlay").addClass("right").removeClass("left");//.attr('data-aos', 'fade-right').attr('data-aos-duration', '1000');
-                } else {
-                    $(this).addClass("left").removeClass("right");
-                    $(this).find(".grid-container, .overlay").addClass("left").removeClass("right");//.attr('data-aos', 'fade-right').attr('data-aos-duration', '1000');
-                }
-            }
-        });
-    }
+        }
 
-// Exécuter le code pour la première fois
-    updateClasses();
+    })
 
-// Exécuter le code à chaque fois que la fenêtre est redimensionnée
-    $(window).on('resize', function() {
-        updateClasses();
-    });
+    AOS.init();
 
 
 });

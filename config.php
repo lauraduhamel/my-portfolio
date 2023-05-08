@@ -5,25 +5,53 @@
 
 //LANGUAGE
 
-
+/*
 session_start();
 
-if (strpos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'fr') === 0) {
-    $filename = './data/data-fr.json'; // utiliser le fichier de données français
+if (strpos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') === 0) {
+    $filename = './data/data-en.json'; // utiliser le fichier de données en
 } else {
-    $filename = './data/data-en.json'; // utiliser le fichier de données anglais
+    $filename = './data/data-fr.json'; // utiliser le fichier de données fr
 }
 
 if (!file_exists($filename)) {
     $filename = './data/data-fr.json';
 }
+*/
 
+session_start();
 
-//JSON DATA
+// Récupération de la langue par défaut du navigateur
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
+// Utilisation de la langue passée dans l'URL si elle est définie
+if (isset($_GET['lang']) && !empty($_GET['lang'])) {
+    if ($_GET['lang'] == "en") {
+        $_SESSION['lang'] = "en";
+    } else if ($_GET['lang'] == "fr") {
+        $_SESSION['lang'] = "fr";
+    }
+}
+
+// Utilisation de la langue de session ou par défaut si aucune langue n'a été définie
+if (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = $lang;
+}
+
+// Détermination du fichier JSON à charger en fonction de la langue de session
+if ($_SESSION['lang'] == "en") {
+    $filename = './data/data-en.json';
+} else {
+    $filename = './data/data-fr.json';
+}
+
+// Chargement des données JSON depuis le fichier correspondant
 $data = file_get_contents($filename);
 $users = json_decode($data);
 
+
+
+//FONCTION CONSOLE LOG POUR AFFICGER
 function console_log($output, $with_script_tags = true)
 {
     $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) .
@@ -45,24 +73,6 @@ $contact = $users->contact;
 $footer = $users->footer;
 $menu = $users->menu;
 $i = 0;
-
-/*
-<?php foreach ($users as $user) { ?>
-    <?php foreach ($users->projects as $project) { ?>
-        <div>
-        <td> <?php echo($project->name); ?> </td>
-        <td> <?php echo($project->description); ?> </td>
-
-
-        <img src="fold/<?php echo ($project->image->url)?>" alt="<?php echo ($user->image->alt)?>">
-
-        <?php foreach ($project -> categories as $category) { ?>
-            <td> <?php echo($category); ?> </td>
-        <?php } ?>
-    <?php } ?>
-    </div>
-
-*/
 
 
  ?>

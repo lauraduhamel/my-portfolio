@@ -18,68 +18,62 @@
         </div>
     </main>
 
-    <section class="works" id="works">
-        <div class="wrap">
-             <div class="flex-container">
-                 <div class="text">
-                    <h2 data-aos="fade-right"><?php echo($work->title); ?></h2>
-                    <p data-aos="fade-right"><?php echo($work->description); ?></p>
-                 </div>
-                 <img src="img/works-icon.svg " data-aos="fade-left" class="icon" alt="icon of a picture">
+
+
+<section class="works" id="works">
+    <div class="wrap">
+        <div class="flex-container">
+            <div class="text">
+                <h2 data-aos="fade-right" ><?php echo($work->title); ?></h2>
+                <p data-aos="fade-right" ><?php echo($work->description); ?></p>
             </div>
-            <div class="line" data-aos="fade-bottom"><span class="line dark"></span></div>
+            <img data-aos="fade-left" src="img/works-icon.svg" class="icon" alt="icon of a picture">
         </div>
-        <div class="global-container">
-                 <div class="project-container">
-                         <div class="projects">
-                        <?php foreach ($projects as $project) {
-                            $i++;
-                            ?>
-                        <div class="project-item" >
-                        <a href="<?php echo($project->link);?>" target="_blank">
-                            <div class="grid-container">
-                                <div class="grid-item-1">
-                                    <p class="number"><?php echo($i) ?></p>
-                                    <h3><?php echo($project->name);?></h3>
-                                </div>
-                                <div class="grid-item-2">
-                                    <img src="img/<?php echo($project->image->url);?>" alt="<?php echo($project->image->alt);?>">
-                                </div>
+        <div class="line" data-aos="fade-bottom"><span class="line dark"></span></div>
+        <div class="projects">
+            <?php foreach ($projects as $project) {
+                $i++;
+                ?>
+                <div class="project-container" >
+                    <a href="<?php echo($project->link);?>" target="_blank">
+                        <div class="grid-container">
+                            <div class="grid-item-1">
+                                <p class="number"><?php echo($i) ?></p>
+                                <h3><?php echo($project->name);?></h3>
                             </div>
-                            <div class="overlay">
-                                    <div class="grid-item-1">
-                                        <p class="number"><?php echo($i);?></p>
-                                    </div>
-                                    <div class="grid-item-2">
-                                        <h3><?php echo($project->name);?></h3>
-                                        <p><?php echo($project->description);?></p>
-                                    </div>
-                                    <div class="grid-item-3">
-                                        <span class="line light"></span>
-                                    </div>
-                                    <div class="grid-item-4">
-                                        <ul>
-                                           <?php foreach ($project->categories as $category) { ?>
-                                            <li><?php echo($category);?></li>
-                                            <?php } ?>
-                                        </ul>
-                                    </div>
+                            <div class="grid-item-2">
+                                <img src="img/<?php echo($project->image->url);?>" alt="<?php echo($project->image->alt);?>">
                             </div>
-                        </a>
                         </div>
-                        <?php } ?>
-                    </div>
-                  <div class="container-buttons">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-pagination"></div>
+                        <div class="overlay">
+                            <div class="grid-item-1">
+                                <p class="number"><?php echo($i);?></p>
+                            </div>
+                            <div class="grid-item-2">
+                                <h3><?php echo($project->name);?></h3>
+                                <p><?php echo($project->description);?></p>
+                            </div>
+                            <div class="grid-item-3">
+                                <span class="line light"></span>
+                            </div>
+                            <div class="grid-item-4">
+                                <ul>
+                                    <?php foreach ($project->categories as $category) { ?>
+                                        <li><?php echo($category);?></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                 </div>
+            <?php } ?>
         </div>
-            <div class="flex-container"  data-aos="fade-top"><span class="line dark"></span></div>
-            <div class="button"  data-aos="fade-top"><a href="https://www.behance.net/lauraduhamel" target="_blank" class="dark"><?php echo($work->button); ?></a></div>
-        </div>
-    </section>
+
+        <div class="flex-container" data-aos="fade-top"><span class="line dark"></span></div>
+        <div class="button" data-aos="fade-top"><a href="https://www.behance.net/lauraduhamel" class="dark"><?php echo($work->button); ?></a></div>
+    </div>
+</section>
+
 
     <section class="about" id="about">
         <div class="wrap">

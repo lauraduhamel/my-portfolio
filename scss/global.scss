@@ -86,6 +86,7 @@ section, main {
     color: $blue;
     background: $white;
     overflow-x: hidden;
+    max-width: 100%;
 
     a {
       color: $blue;
@@ -200,17 +201,3 @@ section, main {
 }
 
 
-
-
-
-
-//animation
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}

@@ -1,7 +1,8 @@
 section.works {
 
-  .swiper-pagination {
-    z-index: 1;
+  .projects {
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   .wrap > div.line {
@@ -26,11 +27,19 @@ section.works {
   }
 
 
-  div.project-item {
+  div.project-container {
     margin: auto;
     margin-bottom: 48px;
     max-width: 1000px;
     position: relative;
+
+
+    overflow: hidden;
+
+
+    &:hover {
+      cursor: url(../img/icon.svg), auto;
+    }
 
 
     img {
@@ -75,7 +84,7 @@ section.works {
       &.left {
         grid-template-areas: "number descriptif line category";
         left: 0;
-          }
+      }
 
       &.right {
         grid-template-areas: "category line descriptif number";
@@ -133,12 +142,15 @@ section.works {
           gap: 5px;
 
         }
+
+
       }
     }
 
 
     div.grid-container {
       display: grid;
+      overflow: hidden;
       grid-auto-rows: minmax(0, auto);
       box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
 
@@ -204,45 +216,11 @@ section.works {
 
 
   }
-
-
-
-
-  //SWIPER - SLIDER
-
-
-
-  div.container-buttons {
-    flex-direction: column;
-    display: none; //change to flex in mobile version
-  }
-
-  .swiper-button-prev {
-    color: $blue;
-  }
-
-  .swiper-button-next {
-    color: $blue;
-  }
-
-  .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 20px;
-  }
-
-
-
-
-
-
-
-
-
-
 }
 
 @media all and (max-width: 1200px) {
 
-  section.works div.project-item:hover .overlay {
+  section.works div.project-container:hover .overlay {
     width:100%;
   }
 
@@ -253,11 +231,13 @@ section.works {
 @media all and (max-width: 1024px) {
 
 
-  section.works {
+  section.works .wrap {
 
-     div.line {
+
+
+    > div.line {
       display: flex;
-      margin-left: auto;
+      margin-left:auto;
     }
 
     div.flex-container {
@@ -265,9 +245,9 @@ section.works {
       align-items: center;
     }
 
-    div.project-item {
-      //max-width: 500px;  SIZE AUTO
-      //margin-bottom: 64px;
+    div.project-container {
+      max-width: 500px;
+      margin-bottom: 64px;
       display: flex;
       flex-direction: column;
 
@@ -296,6 +276,8 @@ section.works {
       }
 
       div.grid-container {
+
+
 
 
         &.right {
@@ -339,7 +321,7 @@ section.works {
       }
     }
 
-    div.project-item {
+    div.project-container {
       padding: 0;
       left: auto;
       right: auto;
@@ -355,166 +337,5 @@ section.works {
 
   }
 
-  //SWIPER - SLIDER - RESPONSIVE
-
-  section.works  {
-
-    .wrap > div.line {
-      margin-left: initial;
-      margin-bottom: initial;
-    }
-
-    div.flex-container {
-      gap: 24px;
-    }
-
-    div.global-container {
-      overflow-x: hidden;
-      position: relative;
-      display: flex;
-      margin: auto;
-      max-width: 700px; //change different to size
-
-
-      .wrap {
-        padding: initial;
-        max-width: initial;
-      }
-
-
-    }
-
-    div.swiper-container {
-      overflow: hidden;
-      margin: auto;
-      max-width: 600px;
-
-      .swiper-wrapper {
-        margin: 32px 0;
-
-      }
-
-      div.container-buttons {
-        display: flex;
-      }
-
-    }
-
-
-  }
-
-}
-
-
-
-@media all and (max-width: 767px) {
-
-
-  section.works {
-
-    div.global-container {
-      max-width: 550px;
-    }
-
-    div.swiper-container {
-      max-width: 450px;
-    }
-
-
-    div.project-item img {
-      height: 250px;
-    }
-
-  }
-
-
-}
-
-@media all and (max-width: 550px) {
-
-  section.works {
-
-    div.global-container {
-      max-width: 500px;
-    }
-
-    div.swiper-container {
-      max-width: 400px;
-    }
-
-    div.project-item img {
-      height: 200px;
-    }
-
-  }
-
-}
-
-
-@media all and (max-width: 480px) {
-
-  section.works {
-
-    div.global-container {
-      max-width: 430px;
-    }
-
-    div.swiper-container {
-      max-width: 330px;
-    }
-
-     div.project-item div.grid-container.left .grid-item-1, section.works div.project-item div.grid-container.right .grid-item-1 {
-      gap:12px;
-    }
-
-  }
-
-}
-
-@media all and (max-width: 400px) {
-
-  section.works div.project-item div.grid-container.left .grid-item-1, section.works div.project-item div.grid-container.right .grid-item-1 {
-    padding: 12px;
-  }
-
-  section.works {
-
-    div.global-container {
-      max-width: 390px;
-    }
-
-    div.project-item p.number {
-      font-size: 90px;
-    }
-
-    div.swiper-container {
-      max-width: 280px;
-    }
-
-  }
-
-}
-
-@media all and (max-width: 350px) {
-
-  section.works {
-
-    div.global-container {
-      max-width: 320px;
-    }
-
-    div.swiper-container {
-      max-width: 230px;
-    }
-
-    div.project-item p.number {
-      font-size: 72px;
-    }
-
-    div.project-item img {
-      height: 200px;
-    }
-
-  }
 
 }

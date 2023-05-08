@@ -1767,6 +1767,7 @@ section.works, section.contact, main.works, main.contact {
   color: #0F0FEE;
   background: #FFFFFF;
   overflow-x: hidden;
+  max-width: 100%;
 }
 section.works a, section.contact a, main.works a, main.contact a {
   color: #0F0FEE;
@@ -1837,14 +1838,6 @@ section.works a, section.contact a, main.works a, main.contact a {
   h2 {
     font-size: 72px;
     line-height: 82px;
-  }
-}
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
   }
 }
 div.button {
@@ -2051,8 +2044,9 @@ main .wrap > div div.button {
     text-align: left;
   }
 }
-section.works .swiper-pagination {
-  z-index: 1;
+section.works .projects {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 section.works .wrap > div.line {
   margin-left: 20%;
@@ -2069,30 +2063,34 @@ section.works div.flex-container {
 section.works div.flex-container img {
   transform: rotate(18deg);
 }
-section.works div.project-item {
+section.works div.project-container {
   margin: auto;
   margin-bottom: 48px;
   max-width: 1000px;
   position: relative;
+  overflow: hidden;
 }
-section.works div.project-item img {
+section.works div.project-container:hover {
+  cursor: url(../img/icon.svg), auto;
+}
+section.works div.project-container img {
   object-fit: cover;
   width: 600px;
   height: 300px;
 }
-section.works div.project-item h3 {
+section.works div.project-container h3 {
   font-family: "EDNimpkish-Regular";
   font-size: 26px;
   line-height: 32px;
   text-transform: lowercase;
 }
-section.works div.project-item p.number {
+section.works div.project-container p.number {
   font-family: "EDNimpkish-Regular";
   font-size: 155px;
   line-height: 155px;
   margin-bottom: -14px;
 }
-section.works div.project-item .overlay {
+section.works div.project-container .overlay {
   display: grid;
   align-items: center;
   visibility: hidden;
@@ -2109,38 +2107,38 @@ section.works div.project-item .overlay {
   width: 0;
   overflow: hidden;
 }
-section.works div.project-item .overlay.left {
+section.works div.project-container .overlay.left {
   grid-template-areas: "number descriptif line category";
   left: 0;
 }
-section.works div.project-item .overlay.right {
+section.works div.project-container .overlay.right {
   grid-template-areas: "category line descriptif number";
   text-align: right;
   right: 0;
   justify-content: end;
 }
-section.works div.project-item .overlay .grid-item-1 {
+section.works div.project-container .overlay .grid-item-1 {
   grid-area: number;
 }
-section.works div.project-item .overlay .grid-item-2 {
+section.works div.project-container .overlay .grid-item-2 {
   grid-area: descriptif;
   min-width: 350px;
 }
-section.works div.project-item .overlay .grid-item-2 p {
+section.works div.project-container .overlay .grid-item-2 p {
   text-transform: none;
 }
-section.works div.project-item .overlay .grid-item-2 h3 {
+section.works div.project-container .overlay .grid-item-2 h3 {
   margin-bottom: 12px;
 }
-section.works div.project-item .overlay .grid-item-3 {
+section.works div.project-container .overlay .grid-item-3 {
   grid-area: line;
   grid-template-columns: 50px;
   display: flex;
 }
-section.works div.project-item .overlay .grid-item-3 span {
+section.works div.project-container .overlay .grid-item-3 span {
   margin: auto;
 }
-section.works div.project-item .overlay .grid-item-4 {
+section.works div.project-container .overlay .grid-item-4 {
   grid-area: category;
   min-width: max-content;
   display: flex;
@@ -2150,224 +2148,124 @@ section.works div.project-item .overlay .grid-item-4 {
   line-height: 24px;
   margin: 16px auto;
 }
-section.works div.project-item .overlay .grid-item-4 > ul {
+section.works div.project-container .overlay .grid-item-4 > ul {
   margin: auto;
   display: grid;
   gap: 5px;
 }
-section.works div.project-item div.grid-container {
+section.works div.project-container div.grid-container {
   display: grid;
+  overflow: hidden;
   grid-auto-rows: minmax(0, auto);
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
-section.works div.project-item div.grid-container .grid-item-1 {
+section.works div.project-container div.grid-container .grid-item-1 {
   grid-area: intro;
   display: flex;
   padding: 0 32px;
   flex-direction: column;
   justify-content: center;
 }
-section.works div.project-item div.grid-container .grid-item-2 {
+section.works div.project-container div.grid-container .grid-item-2 {
   grid-area: image;
   display: flex;
   flex-direction: column;
 }
-section.works div.project-item div.grid-container.left {
+section.works div.project-container div.grid-container.left {
   grid-template-areas: "intro image";
 }
-section.works div.project-item div.grid-container.left .grid-item-2 {
+section.works div.project-container div.grid-container.left .grid-item-2 {
   justify-content: end;
 }
-section.works div.project-item div.grid-container.left .grid-item-2 img {
+section.works div.project-container div.grid-container.left .grid-item-2 img {
   align-self: end;
 }
-section.works div.project-item div.grid-container.right {
+section.works div.project-container div.grid-container.right {
   grid-template-areas: "image intro";
 }
-section.works div.project-item div.grid-container.right .grid-item-1 {
+section.works div.project-container div.grid-container.right .grid-item-1 {
   text-align: right;
 }
-section.works div.project-item:hover .grid-container .grid-item-1 {
+section.works div.project-container:hover .grid-container .grid-item-1 {
   visibility: hidden;
   opacity: 0;
 }
-section.works div.project-item:hover .overlay {
+section.works div.project-container:hover .overlay {
   visibility: visible;
   opacity: 1;
   margin: auto;
   width: 80%;
 }
-section.works div.container-buttons {
-  flex-direction: column;
-  display: none;
-}
-section.works .swiper-button-prev {
-  color: #0F0FEE;
-}
-section.works .swiper-button-next {
-  color: #0F0FEE;
-}
-section.works .swiper-button-next:after, section.works .swiper-button-prev:after {
-  font-size: 20px;
-}
 
 @media all and (max-width: 1200px) {
-  section.works div.project-item:hover .overlay {
+  section.works div.project-container:hover .overlay {
     width: 100%;
   }
 }
 @media all and (max-width: 1024px) {
-  section.works div.line {
+  section.works .wrap > div.line {
     display: flex;
     margin-left: auto;
   }
-  section.works div.flex-container {
+  section.works .wrap div.flex-container {
     flex-direction: column;
     align-items: center;
   }
-  section.works div.project-item {
+  section.works .wrap div.project-container {
+    max-width: 500px;
+    margin-bottom: 64px;
     display: flex;
     flex-direction: column;
   }
-  section.works div.project-item:hover .grid-container .grid-item-1 {
+  section.works .wrap div.project-container:hover .grid-container .grid-item-1 {
     visibility: visible;
     opacity: 1;
   }
-  section.works div.project-item:hover .overlay {
+  section.works .wrap div.project-container:hover .overlay {
     visibility: hidden;
     opacity: 0;
   }
-  section.works div.project-item h3:after {
+  section.works .wrap div.project-container h3:after {
     content: "↗";
     font-family: "Inter";
     margin-left: 5px;
   }
-  section.works div.project-item .overlay {
+  section.works .wrap div.project-container .overlay {
     display: none;
   }
-  section.works div.project-item div.grid-container.right .grid-item-1 {
+  section.works .wrap div.project-container div.grid-container.right .grid-item-1 {
     justify-content: end;
   }
-  section.works div.project-item div.grid-container.right .grid-item-1 p {
+  section.works .wrap div.project-container div.grid-container.right .grid-item-1 p {
     order: 2;
   }
-  section.works div.project-item div.grid-container.left .grid-item-1 {
+  section.works .wrap div.project-container div.grid-container.left .grid-item-1 {
     justify-content: start;
   }
-  section.works div.project-item div.grid-container.left, section.works div.project-item div.grid-container.right {
+  section.works .wrap div.project-container div.grid-container.left, section.works .wrap div.project-container div.grid-container.right {
     grid-template-areas: "intro" "image";
   }
-  section.works div.project-item div.grid-container.left .grid-item-1, section.works div.project-item div.grid-container.right .grid-item-1 {
+  section.works .wrap div.project-container div.grid-container.left .grid-item-1, section.works .wrap div.project-container div.grid-container.right .grid-item-1 {
     padding: 24px;
     flex-direction: row;
     align-items: center;
     gap: 32px;
   }
-  section.works div.project-item div.grid-container.left .grid-item-2, section.works div.project-item div.grid-container.right .grid-item-2 {
+  section.works .wrap div.project-container div.grid-container.left .grid-item-2, section.works .wrap div.project-container div.grid-container.right .grid-item-2 {
     justify-content: center;
   }
-  section.works div.project-item div.grid-container.left .grid-item-2 img, section.works div.project-item div.grid-container.right .grid-item-2 img {
+  section.works .wrap div.project-container div.grid-container.left .grid-item-2 img, section.works .wrap div.project-container div.grid-container.right .grid-item-2 img {
     align-self: center;
   }
-  section.works div.project-item {
+  section.works .wrap div.project-container {
     padding: 0;
     left: auto;
     right: auto;
   }
-  section.works div.project-item img {
+  section.works .wrap div.project-container img {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
-  }
-  section.works .wrap > div.line {
-    margin-left: initial;
-    margin-bottom: initial;
-  }
-  section.works div.flex-container {
-    gap: 24px;
-  }
-  section.works div.global-container {
-    overflow-x: hidden;
-    position: relative;
-    display: flex;
-    margin: auto;
-    max-width: 700px;
-  }
-  section.works div.global-container .wrap {
-    padding: initial;
-    max-width: initial;
-  }
-  section.works div.swiper-container {
-    overflow: hidden;
-    margin: auto;
-    max-width: 600px;
-  }
-  section.works div.swiper-container .swiper-wrapper {
-    margin: 32px 0;
-  }
-  section.works div.swiper-container div.container-buttons {
-    display: flex;
-  }
-}
-@media all and (max-width: 767px) {
-  section.works div.global-container {
-    max-width: 550px;
-  }
-  section.works div.swiper-container {
-    max-width: 450px;
-  }
-  section.works div.project-item img {
-    height: 250px;
-  }
-}
-@media all and (max-width: 550px) {
-  section.works div.global-container {
-    max-width: 500px;
-  }
-  section.works div.swiper-container {
-    max-width: 400px;
-  }
-  section.works div.project-item img {
-    height: 200px;
-  }
-}
-@media all and (max-width: 480px) {
-  section.works div.global-container {
-    max-width: 430px;
-  }
-  section.works div.swiper-container {
-    max-width: 330px;
-  }
-  section.works div.project-item div.grid-container.left .grid-item-1, section.works section.works div.project-item div.grid-container.right .grid-item-1 {
-    gap: 12px;
-  }
-}
-@media all and (max-width: 400px) {
-  section.works div.project-item div.grid-container.left .grid-item-1, section.works div.project-item div.grid-container.right .grid-item-1 {
-    padding: 12px;
-  }
-  section.works div.global-container {
-    max-width: 390px;
-  }
-  section.works div.project-item p.number {
-    font-size: 90px;
-  }
-  section.works div.swiper-container {
-    max-width: 280px;
-  }
-}
-@media all and (max-width: 350px) {
-  section.works div.global-container {
-    max-width: 320px;
-  }
-  section.works div.swiper-container {
-    max-width: 230px;
-  }
-  section.works div.project-item p.number {
-    font-size: 72px;
-  }
-  section.works div.project-item img {
-    height: 200px;
   }
 }
 section.about img {
@@ -2832,27 +2730,6 @@ header {
 *.works::selection, *.contact::selection {
   background: #0F0FEE;
   color: #FFFFFF;
-}
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.aleft {
-  transform: translateX(-1500px);
-}
-
-.aright {
-  transform: translateX(1500px);
-}
-
-.atop {
-  transform: translateY(-1500px);
-}
-
-.abottom {
-  transform: translateY(1500px);
 }
 
 /*# sourceMappingURL=style.css.map */
