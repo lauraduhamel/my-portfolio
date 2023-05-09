@@ -1730,12 +1730,19 @@ li {
 }
 
 body {
-  overflow-x: hidden;
   font-family: "Inter";
   color: #FFFFFF;
   background: #0F0FEE;
   font-size: 14px;
   line-height: 20px;
+}
+
+* {
+  overflow: hidden;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 a {
@@ -1766,7 +1773,6 @@ section, main {
 section.works, section.contact, main.works, main.contact {
   color: #0F0FEE;
   background: #FFFFFF;
-  overflow-x: hidden;
   max-width: 100%;
 }
 section.works a, section.contact a, main.works a, main.contact a {
@@ -1838,6 +1844,12 @@ section.works a, section.contact a, main.works a, main.contact a {
   h2 {
     font-size: 72px;
     line-height: 82px;
+  }
+}
+@media all and (max-width: 320px) {
+  h2 {
+    font-size: 60px;
+    line-height: 72px;
   }
 }
 div.button {
@@ -2044,10 +2056,6 @@ main .wrap > div div.button {
     text-align: left;
   }
 }
-section.works .projects {
-  overflow-x: hidden;
-  max-width: 100%;
-}
 section.works .wrap > div.line {
   margin-left: 20%;
   margin-bottom: 64px;
@@ -2068,7 +2076,6 @@ section.works div.project-container {
   margin-bottom: 48px;
   max-width: 1000px;
   position: relative;
-  overflow: hidden;
 }
 section.works div.project-container:hover {
   cursor: url(../img/icon.svg), auto;
@@ -2086,6 +2093,7 @@ section.works div.project-container h3 {
 }
 section.works div.project-container p.number {
   font-family: "EDNimpkish-Regular";
+  min-width: max-content;
   font-size: 155px;
   line-height: 155px;
   margin-bottom: -14px;
@@ -2155,7 +2163,6 @@ section.works div.project-container .overlay .grid-item-4 > ul {
 }
 section.works div.project-container div.grid-container {
   display: grid;
-  overflow: hidden;
   grid-auto-rows: minmax(0, auto);
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
@@ -2266,6 +2273,12 @@ section.works div.project-container:hover .overlay {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+  }
+}
+@media all and (max-width: 320px) {
+  main h1 {
+    font-size: 60px;
+    line-height: 75px;
   }
 }
 section.about img {
@@ -2418,6 +2431,25 @@ section.contact div.grid-container .grid-item-4 img {
 @media all and (max-width: 480px) {
   section.contact h3 {
     font-size: 48px;
+  }
+}
+@media all and (max-width: 380px) {
+  section.contact h3 {
+    font-size: 40px;
+  }
+  section.contact h3:last-of-type {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media all and (max-width: 320px) {
+  section.contact h3 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  section.contact h3:last-of-type {
+    font-size: 15px;
+    line-height: 20px;
   }
 }
 footer {

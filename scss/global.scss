@@ -35,6 +35,8 @@ $paragraph : 'Inter';
   box-sizing: border-box;
 
 
+
+
 }
 
 li {
@@ -42,13 +44,21 @@ li {
 }
 
 body {
-  overflow-x: hidden;
   font-family: $paragraph;
   color: $white;
   background: $blue;
   font-size: 14px;
   line-height: 20px;
 }
+
+//FIXED OVERFLOW
+* {
+  overflow:hidden;
+}
+html {
+  overflow-y:scroll;
+}
+
 
 a {
   color:$white;
@@ -85,8 +95,11 @@ section, main {
   &.works, &.contact {
     color: $blue;
     background: $white;
-    overflow-x: hidden;
     max-width: 100%;
+
+    * {
+
+    }
 
     a {
       color: $blue;
@@ -201,3 +214,11 @@ section, main {
 }
 
 
+@media all and (max-width: 320px) {
+
+  h2 {
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+}

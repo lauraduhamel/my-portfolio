@@ -1,8 +1,8 @@
 section.works {
 
   .projects {
-    overflow-x: hidden;
-    max-width: 100%;
+    //overflow-x: hidden;
+   // max-width: 100%;
   }
 
   .wrap > div.line {
@@ -32,9 +32,10 @@ section.works {
     margin-bottom: 48px;
     max-width: 1000px;
     position: relative;
+    //overflow: hidden;
 
 
-    overflow: hidden;
+
 
 
     &:hover {
@@ -58,6 +59,7 @@ section.works {
 
     p.number {
       font-family: $title;
+      min-width: max-content;
       font-size: 155px;
       line-height: 155px;
       margin-bottom: -14px;
@@ -78,7 +80,7 @@ section.works {
       column-gap: 32px;
       padding: 0 32px;
       width: 0;
-      overflow: hidden;
+      overflow: hidden; // do not remove
 
 
       &.left {
@@ -150,7 +152,7 @@ section.works {
 
     div.grid-container {
       display: grid;
-      overflow: hidden;
+      //overflow: hidden;
       grid-auto-rows: minmax(0, auto);
       box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
 
@@ -337,5 +339,16 @@ section.works {
 
   }
 
+
+}
+
+
+@media all and (max-width: 320px) {
+
+
+  main h1 {
+    font-size: 60px;
+    line-height: 75px;
+  }
 
 }

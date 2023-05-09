@@ -29,7 +29,6 @@
     <script src="js/animation.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/update.js"></script>
-    <script src="js/swiper.js"></script>
 
 
 

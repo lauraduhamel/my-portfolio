@@ -15,6 +15,7 @@ section.contact {
   }
 
   div.grid-container {
+    //overflow: hidden;
     display: grid;
     grid-column: 3;
     grid-auto-columns: minmax(15px, auto);
@@ -119,4 +120,31 @@ section.contact {
     font-size: 48px;
   }
 
+
+}
+
+@media all and (max-width: 380px) {
+
+  section.contact h3 {
+    font-size: 40px;
+  }
+
+  section.contact h3:last-of-type {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+}
+
+@media all and (max-width: 320px) {
+
+  section.contact h3 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  section.contact h3:last-of-type {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
